@@ -1,0 +1,217 @@
+/*
+ * colors variables
+ */
+.article-cont {
+  width: 75%;
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.article-cont .article-left-box {
+  width: 75%;
+  float: left;
+}
+
+.article-cont .article-left-box .tit-list {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.article-cont .article-left-box .tit-list a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #787d82;
+  text-decoration: none;
+}
+
+.article-cont .article-left-box .tit-list a:hover {
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .tit-list .active {
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .content .item {
+  background: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #050505;
+}
+
+.article-cont .article-left-box .content .item .title {
+  position: relative;
+  padding: 20px 30px 0px 30px;
+}
+
+.article-cont .article-left-box .content .item .title i {
+  margin-right: 10px;
+}
+
+.article-cont .article-left-box .content .item .title .time {
+  position: absolute;
+  top: 20px;
+  font-size: 14px;
+  right: 30px;
+  color: #787d82;
+}
+
+.article-cont .article-left-box .content .item .about {
+  padding: 10px 30px 20px 52px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #999;
+}
+
+.article-cont .article-left-box .content .item .drop-down {
+  overflow: hidden;
+  height: 0;
+  transition: 1s;
+}
+
+.article-cont .article-left-box .content .item .list-box {
+  overflow: hidden;
+  border-top: 2px solid #f4f4f4;
+  padding: 0px 30px 0px 52px;
+  margin: 0px;
+}
+
+.article-cont .article-left-box .content .item .list-box li {
+  color: #999;
+  list-style: none;
+  position: relative;
+  line-height: 40px;
+}
+
+.article-cont .article-left-box .content .item .list-box li span {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+.article-cont .article-left-box .content .item .list-box li:first-child {
+  margin-top: 10px;
+}
+
+.article-cont .article-left-box .content .item .list-box li:last-child {
+  margin-bottom: 10px;
+}
+
+.article-cont .article-left-box .content .item .list-box .active {
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .content .item .overwrite {
+  display: block;
+  color: #050505;
+  text-align: center;
+  text-decoration: none;
+  padding: 30px 30px 30px 54px;
+}
+
+.article-cont .article-right-box {
+  width: 24%;
+  float: right;
+  padding-top: 82px;
+}
+
+.article-cont .article-right-box .about-teach {
+  background: #fff;
+  padding: 20px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info {
+  overflow: hidden;
+}
+
+.article-cont .article-right-box .about-teach .teach-info img {
+  float: left;
+  margin-right: 10px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info span {
+  font-size: 16px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info .about {
+  text-align: left;
+  line-height: 24px;
+  margin-top: 5px;
+  color: #5f1898;
+}
+
+.article-cont .article-right-box .about-teach p:nth-child(2) {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.article-cont .article-right-box .about-teach p:nth-child(2) a {
+  display: inline-block;
+  width: 100%;
+  background: #00a4ff;
+  color: #fff;
+}
+
+.article-cont .article-right-box .about-teach .synopsis {
+  color: #787d82;
+}
+
+.article-cont .article-right-box .learing-box .tit {
+  font-size: 18px;
+  color: #00a4ff;
+  padding: 20px;
+}
+
+.article-cont .article-right-box .learing-box .item-box {
+  background: #fff;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top {
+  background: url(../img/widget-titBg.png) no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-tit {
+  font-size: 22px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-lab {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-num {
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 34px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-num span {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list {
+  padding: 0 20px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list a {
+  color: #050505;
+  display: block;
+  line-height: 50px;
+  border-bottom: solid 1px #bdbdbd;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list a:last-child {
+  border: none;
+}

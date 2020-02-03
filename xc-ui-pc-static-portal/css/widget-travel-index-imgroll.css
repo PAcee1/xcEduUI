@@ -1,0 +1,55 @@
+.banner-roll {
+  width: 100%;
+  position: absolute;
+}
+
+@media (max-width: 1200px) {
+  .banner-roll {
+    min-width: 1024px !important;
+    position: absolute;
+  }
+}
+
+@media (min-width: 120px) {
+  .banner-roll {
+    position: absolute;
+  }
+}
+
+.banner-roll .indicators {
+  position: absolute;
+  z-index: 51;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+.banner-roll .indicators span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: solid 2px #fff;
+  border-radius: 50%;
+}
+
+.banner-roll .active {
+  background: #fff;
+}
+
+.banner-roll .banner-item {
+  overflow: hidden;
+  position: relative;
+  height: 410px;
+}
+
+.banner-roll .banner-item .item {
+  position: absolute;
+  height: 410px;
+  background: top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}

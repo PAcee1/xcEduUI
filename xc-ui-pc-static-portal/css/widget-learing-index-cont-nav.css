@@ -1,0 +1,55 @@
+/*
+ * colors variables
+ */
+.index-cont-nav {
+  padding: 20px;
+  position: fixed;
+  display: none;
+  background: #fff;
+  top: 0px;
+  left: 50%;
+  margin-left: -733px;
+  z-index: 99;
+}
+
+.index-cont-nav .logo-ico {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #ccc;
+}
+
+.index-cont-nav .logo-ico img {
+  display: inline-block;
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.index-cont-nav a {
+  color: #333;
+  display: block;
+  padding: 5px 0px !important;
+}
+
+.index-cont-nav li {
+  float: none;
+}
+
+.index-cont-nav .navbar-collapse {
+  padding: 0px !important;
+}
+
+.index-cont-nav .active {
+  border-bottom: solid 1px #00a4ff;
+}
+
+.win-min {
+  left: 0;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 1460px) {
+  .index-cont-nav {
+    left: 0;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,64 @@
+/*
+ * colors variables
+ */
+.list-cont-right {
+  margin: 15px 0px;
+}
+
+.list-cont-right .right-box {
+  padding: 0 15px;
+}
+
+.list-cont-right .tit {
+  font-size: 16px;
+  text-align: left;
+  line-height: 36px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: #00a4ff;
+}
+
+.list-cont-right .contList {
+  background: #fff;
+}
+
+.list-cont-right .contList .contList-titA {
+  padding: 15px;
+  color: #fff;
+  background: url(../img/widget-topBg.png) no-repeat;
+  background-size: cover;
+}
+
+.list-cont-right .contList .contList-item {
+  margin: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #ccc;
+}
+
+.list-cont-right .contList .contList-item p {
+  line-height: 20px;
+}
+
+.list-cont-right .contList .contList-item li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.list-cont-right .contList .contList-item span {
+  color: #ff7c2d;
+}
+
+.list-cont-right .contList .contList-item em {
+  font-weight: bold;
+}
+
+.list-cont-right .contList .contList-item:last-child {
+  border: none;
+}
+
+.list-cont-right .contList .contList-titB {
+  padding: 15px;
+  color: #fff;
+  background: url(../img/widget-btnBg.png) no-repeat;
+  background-size: cover;
+}

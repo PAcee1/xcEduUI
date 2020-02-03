@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/vue/vue.min.js"></script>
+    <script src="/js/jwt-decode/jwt-decode.min.js"></script>
+    <script src="/js/base64.min.js"></script>
+    <script src="/js/axios/axios.min.js"></script>
+    <script src="/js/querystring/index.js"></script>
+    <script src="/js/public.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/css/el/index.js"></script>
+
+</head>
+<body >
+<!-- 页面 css js -->
+<script type="text/javascript" src="/static/plugins/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $('.vid-act').click(function() {
+        $(this).find('.i-heart').css('background-position', '4px -55px')
+    })
+
+
+    $(function() {
+        //点击下拉
+        //用法：HTML 点击事件为more,父级使用overflow：hidden；限定高 more与要展开的内容为同级 要展开内容添加 drop-down的class
+        function ckMove(target, ckgar, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find(ckgar).on('click', function() {
+                var h = $(this).parent().find('.drop-down ul').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        //章节收缩
+        ckMove('.article-cont .article-left-box', '.title', 0);
+
+        /* $('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    /*$(function() {
+     $('.learing-box .item-list').mouseover(function(e) {
+     $(this).css({
+     'height': '140px'
+     }).addClass('hov').siblings().css({
+     'height': '50px'
+     })
+     $(this).siblings().removeClass('hov')
+     })
+     $('.learing-box .item-box').mouseout(function() {
+     $(this).find('.item-list:first').css({
+     'height': '140px'
+     }).addClass('hov')
+     $(this).find('.item-list:first').siblings().css({
+     'height': '50px'
+     }).removeClass('hov')
+     })
+     })*/
+
+
+    $(function() {
+        $('.active-box span').click(function() {
+            $(this).css({
+                'color': '#00a4ff'
+            })
+            if ($(this).find('i').hasClass('i-laud')) {
+                $(this).find('.i-laud').css('background-position', '-80px -19px')
+            } else if ($(this).find('i').hasClass('i-coll')) {
+                $(this).find('.i-coll').css('background-position', '1px -75px')
+            }
+        })
+        /*$('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    $(function() {
+        //评分
+        $('.star .score').map(function(n, i) {
+            var x = Number($(this).find('i').text());
+            var w = 109 * (1 - x / 5);
+            $(this).css('width', w + 'px');
+        })
+        //评论打分
+        $('.evaluate .star').mousemove(function(e) {
+            var startX = $(this).offset().left;
+            var movX = e.clientX - startX + 0.5;
+            var w = 145 * (1 - movX / 145);
+            $(this).find('.score').css('width', w + 'px');
+            $('.star-score i').text((movX / 145 * 5).toFixed(1))
+        })
+        //星级评分
+        $('.grade').map(function(n, i) {
+            var pret = $(this).find('.percent-num i').text();
+            var wt = $(this).find('.grade-percent').width();
+            $(this).find('.grade-percent span').css('width', wt * pret / 100);
+        })
+
+
+
+    })
+
+
+    $(function() {
+        //点击下拉
+        function ckMove(target, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find('.on-off').on('click', function() {
+                var h = $(this).parent().find('.drop-down p').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        ckMove('.cktop', 60);
+        ckMove('.cont .item', 0);
+        //点击关闭弹窗
+        $('.close-popup').click(function() {
+            $('.popup-box').hide();
+        })
+        $('.tit-list a').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            var clasNod = '.' + $(this)[0].id
+            $(clasNod).show().siblings().hide()
+        })
+        // 资料下载
+        $('.down-fill span').click(function() {
+            $('.down-fill ul').css({
+                display: 'block'
+            });
+        })
+        $('.down-fill ul li').click(function() {
+            $('.down-fill ul').css({
+                display: 'none'
+            });
+        })
+    })
+</script>
+<script>
+
+   var body= new Vue({   //创建一个Vue的实例
+        el: "#body", //挂载点是id="app"的地方
+
+        data: {
+            title:'测试',
+            courseId:''
+
+
+        },
+        methods: {
+
+
+        },
+       created() {
+
+        },
+        mounted(){
+            alert(courseId)
+        }
+    })
+</script>
+</body>
+</html>

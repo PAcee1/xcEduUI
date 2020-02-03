@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.course-problem-cont {
+  background: #000;
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  padding: 0 !important;
+  border-right: solid 1px #333;
+  overflow: auto;
+}
+
+.course-problem-cont i:before {
+  top: 11px;
+  position: relative;
+}
+
+.course-problem-cont .sum-up {
+  line-height: 40px;
+  font-size: 18px;
+  border-bottom: solid 1px #999;
+}
+
+.course-problem-cont .sum-up i {
+  margin-right: 20px;
+}
+
+.course-problem-cont .top {
+  font-size: 24px;
+  line-height: 50px;
+  padding: 0 15px;
+  color: #999;
+  background: #14191f;
+}
+
+.course-problem-cont .subtitle-cont {
+  box-shadow: 2px 2px 2px #333;
+  padding: 15px;
+  margin: 15px auto;
+  background: #fff;
+}
+
+.course-problem-cont .subtitle-cont li {
+  line-height: 200%;
+  padding-left: 20px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.course-problem-cont .subtitle-cont li label {
+  font-weight: 100;
+  padding-left: 20px;
+  display: block;
+}
+
+.course-problem-cont .subtitle-cont li .problem-tit {
+  background: rgba(255, 255, 203, 0.8);
+  padding-right: 10px;
+}
+
+.course-problem-cont .subtitle-cont li .problem-tit i {
+  font-size: 24px;
+  color: #00a4ff;
+  margin: 0 10px;
+}
+
+.course-problem-cont .subtitle-cont li .problem-tit .pull-left {
+  line-height: 36px;
+}
+
+.course-problem-cont .subtitle-cont li .problem-explain .correct {
+  color: #00a4ff;
+}
+
+.course-problem-cont .subtitle-cont li .problem-explain .explain {
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  border: solid 1px #ddd;
+}
+
+.course-problem-cont .subtitle-cont .problem-spaces {
+  line-height: 40px;
+}
+
+.course-problem-cont .subtitle-cont .problem-spaces input {
+  border: none;
+  line-height: 30px;
+  border-bottom: solid 1px #333;
+}
+
+.course-problem-cont .subtitle-cont .problem-spaces .font-numA {
+  width: 120px;
+}
+
+.course-problem-cont .subtitle-cont .problem-spaces .font-numB {
+  width: 240px;
+}
+
+.course-problem-cont .subtitle-cont .problem-spaces .font-numC {
+  width: 360px;
+}
+
+.course-problem-cont .subtitle-cont .title {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.course-problem-cont .subtitle-cont .answer-but {
+  margin-top: 20px;
+}
+
+.course-problem-cont .subtitle-cont .btn-primary {
+  background: #00a4ff;
+  border: none;
+  border-radius: 0;
+  padding: 6px 40px;
+}
+
+.course-evaluate .shade {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0.7;
+}
+
+.course-evaluate .evaluate {
+  width: 50%;
+  position: fixed;
+  background: #fff;
+  padding: 15px;
+  left: 50%;
+  margin-left: -25%;
+  top: 30%;
+  max-height: 500px;
+  z-index: 2;
+  border: solid 1px #333;
+  box-shadow: 2px 2px 0px #333;
+}
+
+.course-evaluate .evaluate .title {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.course-evaluate .evaluate .title .star-score {
+  font-size: 18px;
+  color: #999;
+  padding-left: 10px;
+}
+
+.course-evaluate .evaluate .text-right {
+  margin-top: 10px;
+}
+
+.course-evaluate .evaluate .text-right a {
+  padding: 5px 25px;
+}
+
+.star {
+  width: 107px;
+  height: 19px;
+  margin-top: 8px;
+  display: inline-block;
+  background: url(../img/star.jpg) no-repeat;
+  background-size: contain;
+}
+
+.star .score {
+  width: 50px;
+  height: 19px;
+  float: right;
+  display: inline-block;
+  background: url(../img/starGrey.jpg) top right no-repeat;
+  background-size: cover;
+}
+
+.star .score i {
+  display: none;
+}

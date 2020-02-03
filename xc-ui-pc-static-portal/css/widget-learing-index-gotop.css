@@ -1,0 +1,45 @@
+/*
+ * colors variables
+ */
+.gotop {
+  position: fixed;
+  left: 50%;
+  width: 60px;
+  padding: 5px;
+  margin-left: 575px;
+  bottom: 100px;
+  background: #fff;
+}
+
+.gotop a {
+  display: inline-block;
+  width: 40px;
+  background: #ddd;
+  color: #333;
+  margin: 5px;
+  padding: 5px;
+  color: #00a4ff;
+  text-decoration: none;
+  position: relative;
+}
+
+.gotop a i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.gotop a span {
+  background: #787d82;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  color: #00a4ff;
+}
+
+.gotop a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #00a4ff;
+}

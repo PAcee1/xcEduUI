@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.article-cont {
+  width: 75%;
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.article-cont .article-left-box {
+  padding-top: 20px;
+  width: 75%;
+  float: left;
+}
+
+.article-cont .article-left-box .comment-box .evaluate {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  padding: 25px;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-top {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-top .tit {
+  float: left;
+  width: 15%;
+  text-align: center;
+  min-width: 102px;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-top .star-score {
+  font-size: 14px;
+  background: url(../../assets/img/scorbg.png) no-repeat;
+  color: #ff7c2d;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  top: -5px;
+  left: 10px;
+  width: 71px;
+  height: 20px;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont .tit {
+  float: left;
+  width: 15%;
+  min-width: 102px;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont .text-box {
+  float: left;
+  width: 80%;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont .text-box .form-control {
+  border-radius: 0;
+  border: solid 1px #787d82;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont .text-right {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.article-cont .article-left-box .comment-box .evaluate .eva-cont .text-right span {
+  cursor: pointer;
+  background: #00a4ff;
+  display: inline-block;
+  padding: 4px 15px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate {
+  margin-top: 10px;
+  padding: 30px 30px 20px 30px;
+  background: #fff;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-tit {
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-tit span {
+  position: absolute;
+  right: 0;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-tit span label {
+  margin-right: 15px;
+  color: #787d82;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-tit span label input {
+  position: relative;
+  top: 2px;
+  margin-right: 1px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #dadada;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-left {
+  float: left;
+  width: 22%;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-left .star-scor {
+  position: relative;
+  overflow: hidden;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-left .star-scor .scor {
+  float: right;
+  position: relative;
+  top: -1px;
+  color: #ff7c2d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-left .all-scor {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right {
+  float: right;
+  width: 70%;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right .star-grade {
+  margin: 8px 0;
+  position: relative;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right .star-grade .grade {
+  float: right;
+  width: 90%;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right .star-grade .grade .grade-percent {
+  width: 85%;
+  height: 15px;
+  background: #dadada;
+  float: left;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right .star-grade .grade .grade-percent span {
+  display: inline-block;
+  background: #f07700;
+  height: 15px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .top-cont .cont-top-right .star-grade .grade .percent-num {
+  position: relative;
+  top: -4px;
+  float: right;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .title {
+  font-size: 18px;
+  position: relative;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .title span {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item {
+  overflow: hidden;
+  border-bottom: solid 1px #dadada;
+  padding: 20px 0;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item .item-left {
+  width: 15%;
+  float: left;
+  text-align: center;
+  color: #0077cc;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item .item-cent {
+  float: left;
+  width: 60%;
+  color: #787d82;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item .item-cent .time {
+  margin-top: 5px;
+  color: #999;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item .item-rit {
+  width: 20%;
+  float: right;
+  color: #787d82;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .item .item-rit p:last-child span {
+  color: #ff7c2d;
+}
+
+.article-cont .article-left-box .comment-box .course-evaluate .comment-item-box .get-more {
+  color: #f07700;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.article-cont .article-right-box {
+  width: 24%;
+  float: right;
+  padding-top: 20px;
+}
+
+.article-cont .article-right-box .about-teach {
+  background: #fff;
+  padding: 20px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info {
+  overflow: hidden;
+}
+
+.article-cont .article-right-box .about-teach .teach-info img {
+  float: left;
+  margin-right: 10px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info span {
+  font-size: 16px;
+}
+
+.article-cont .article-right-box .about-teach .teach-info .about {
+  text-align: left;
+  line-height: 24px;
+  margin-top: 5px;
+  color: #5f1898;
+}
+
+.article-cont .article-right-box .about-teach p:nth-child(2) {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.article-cont .article-right-box .about-teach p:nth-child(2) a {
+  display: inline-block;
+  width: 100%;
+  background: #00a4ff;
+  color: #fff;
+}
+
+.article-cont .article-right-box .about-teach .synopsis {
+  color: #787d82;
+}
+
+.article-cont .article-right-box .learing-box .tit {
+  font-size: 18px;
+  color: #00a4ff;
+  padding: 20px;
+}
+
+.article-cont .article-right-box .learing-box .item-box {
+  background: #fff;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top {
+  background: url(../img/widget-titBg.png) no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-tit {
+  font-size: 22px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-lab {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-num {
+  font-size: 14px;
+  text-align: left;
+  position: relative;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 34px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-top .top-num span {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list {
+  padding: 0 20px;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list a {
+  color: #050505;
+  display: block;
+  line-height: 50px;
+  border-bottom: solid 1px #bdbdbd;
+}
+
+.article-cont .article-right-box .learing-box .item-box .item-list a:last-child {
+  border: none;
+}
+
+.star {
+  width: 145px;
+  height: 23px;
+  margin-top: 0px;
+  display: inline-block;
+  background: url(../../assets/img/stara.png) no-repeat;
+  background-size: contain;
+}
+
+.star .score {
+  width: 0px;
+  height: 23px;
+  float: right;
+  display: inline-block;
+  background: url(../../assets/img/starGreya.png) top right no-repeat;
+  background-size: cover;
+}
+
+.star .score i {
+  display: none;
+}
+
+.star-show {
+  width: 109px;
+  height: 19px;
+  margin-top: 0px;
+  display: inline-block;
+  background: url(../../assets/img/star-show.png) no-repeat;
+  background-size: contain;
+}
+
+.star-show .score i {
+  display: none;
+}

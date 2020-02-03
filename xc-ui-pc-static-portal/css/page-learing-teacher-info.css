@@ -1,0 +1,469 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+/*
+ * colors variables
+ */
+header {
+  width: 100%;
+  background: #fff;
+}
+
+header a {
+  color: #333;
+}
+
+header a:hover {
+  color: #ff7c2d;
+  text-decoration: none;
+}
+
+header .navbar {
+  min-width: 1024px;
+  margin: 0 auto;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+header .navbar .logo {
+  width: 195px;
+  float: left;
+  min-width: 110px;
+  margin-right: 2%;
+}
+
+header .navbar .starch {
+  float: right;
+  min-width: 326px;
+  margin-right: 5%;
+}
+
+header .navbar .sign-in {
+  float: right;
+}
+
+header .navbar .sign-in a {
+  color: #14191f;
+}
+
+header .navbar .sign-in span {
+  color: #787d82;
+}
+
+header .navbar .sign-in .personal {
+  color: #787d82;
+}
+
+header .navbar .sign-in .personal .personalIco::before {
+  content: ' ● ';
+  color: red;
+  font-weight: bold;
+  right: 1px;
+  top: -8px;
+  position: absolute;
+}
+
+header .navbar .sign-in .personal span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 6px;
+  margin-left: 8px;
+  background: url(../img/asset-personalIco.png) no-repeat;
+}
+
+header .navbar .sign-in .myInfo {
+  color: #787d82;
+}
+
+header .navbar .sign-in .myInfo img {
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+  top: -2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+header .navbar-nav {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+header .navbar-nav li a {
+  padding: 9px 15px !important;
+}
+
+header .active {
+  border-bottom: solid 2px #00a4ff;
+}
+
+header .sign-in {
+  margin-top: 12px;
+  margin-right: 0px;
+}
+
+header .sign-in a {
+  color: #00a4ff;
+}
+
+header .learingHeader {
+  max-width: 1366px;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+header input {
+  height: 35px;
+  margin-top: 7px;
+}
+
+header .input-search {
+  border: solid 2px #00a4ff;
+  width: 280px;
+  padding-left: 10px;
+}
+
+header .search-buttom {
+  border: solid 2px #00a4ff;
+  background: #00a4ff;
+  color: #fff;
+  font-weight: bold;
+  width: 14%;
+  max-width: 80px;
+}
+
+/*
+ * colors variables
+ */
+footer {
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  padding: 40px 0;
+  line-height: 260%;
+}
+
+footer .btn-primary {
+  min-width: 100px;
+  margin-top: 10px;
+}
+
+footer img {
+  position: relative;
+  top: -8px;
+  left: 0px;
+}
+
+footer dt {
+  margin-bottom: 20px;
+}
+
+footer dd {
+  line-height: 200%;
+}
+
+html, body {
+  background: #f4f4f4;
+}
+
+.teacher-info .teac-top {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.teacher-info .teac-top img {
+  max-width: 270px;
+  margin: 10px 0px;
+}
+
+.teacher-info .teac-top .col-sm-9 div:nth-child(2) {
+  font-size: 18px;
+  height: 50px;
+}
+
+.teacher-info .teac-top .col-sm-9 div:nth-child(3) {
+  font-size: 16px;
+  line-height: 24px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.teacher-info .teacher-course-list {
+  margin: 15px 0;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.teacher-info .teacher-course-list .title {
+  font-size: 22px;
+  padding-left: 20px;
+  border-left: solid 8px #00a4ff;
+}
+
+.teacher-info .teacher-course-list .course-list {
+  margin: 10px 15px 0 15px;
+  padding: 0 15px;
+  border-top: solid 1px #787d82;
+}
+
+.teacher-info .teacher-course-list .course-list img {
+  max-width: 140px;
+  margin: 10px 0px;
+}
+
+.teacher-info .teacher-course-list .course-list li {
+  list-style: none;
+  overflow: auto;
+  padding: 10px 0 30px 0;
+  border-bottom: dashed 1px #ddd;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info {
+  float: left;
+  width: 79%;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info .col-sm-2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info .col-sm-2 img {
+  padding: 0px;
+  margin: 5px 0px;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info div:nth-child(2) {
+  height: 30px;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info div:nth-child(4) {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info div:nth-child(4) .glyphicon:before {
+  position: relative;
+  margin-left: 5px;
+  top: 2px;
+}
+
+.teacher-info .teacher-course-list .course-list .list-info div:nth-child(4) .cl-star {
+  color: #ffc10d !important;
+}
+
+.teacher-info .teacher-course-list .course-list .go-learing {
+  width: 20%;
+  float: right;
+  height: 100px;
+  border-left: solid 1px #dadada;
+}
+
+.teacher-info .teacher-course-list .course-list .go-learing a {
+  margin-top: 32px;
+  padding: 10px 40px;
+}

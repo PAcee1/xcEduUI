@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.compet span {
+  color: #cc3300;
+}
+
+.compet .textInd p {
+  text-indent: 20px;
+}
+
+.compet .top {
+  padding: 5px 10px;
+  background: #1b66a1;
+  color: #fff;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: -webkit-box;
+}
+
+.compet .top img {
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  max-height: 38px;
+  max-width: 38px;
+  margin-right: 10px;
+  border: solid 2px #076097;
+}
+
+.compet .top div {
+  font-size: 140%;
+  line-height: 190%;
+}
+
+.compet .top div:nth-child(1) {
+  text-align: left;
+}
+
+.compet .top div:nth-child(2) {
+  min-width: 240px;
+  -webkit-box-flex: 1;
+}
+
+.compet .top div:nth-child(3) {
+  min-width: 147px;
+  text-align: right;
+}
+
+.compet .course {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.compet .course .tit {
+  border-bottom: solid 3px #1b66a1;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.compet .course .tit span {
+  font-size: 140%;
+}
+
+.compet .course .contList {
+  padding: 20px;
+  border: solid 2px #1b66a1;
+  position: relative;
+}
+
+.compet .course .contList .topDot {
+  height: 20px;
+  color: #1b66a1;
+}
+
+.compet .course .contList .topDot::before {
+  content: "●";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+}
+
+.compet .course .contList .topDot::after {
+  content: '●';
+  position: absolute;
+  right: 5px;
+  top: -5px;
+}
+
+.compet .course .contList div {
+  margin-bottom: 10px;
+  border-bottom: dashed 1px #1b66a1;
+}
+
+.compet .course .contList div:last-of-type {
+  border-bottom: none;
+}

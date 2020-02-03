@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.personal-cont {
+  background: #fff;
+  padding: 0px 50px 50px 50px;
+}
+
+.personal-cont .top .tit {
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.personal-cont .top .tit span {
+  display: inline-block;
+  border-bottom: solid 2px #00a4ff;
+}
+
+.personal-cont .top .top-cont {
+  position: relative;
+  border: solid 1px #999;
+  padding: 10px 15px 10px 30px;
+  box-shadow: 2px 2px 4px #999;
+}
+
+.personal-cont .top .top-cont .imgIco {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+}
+
+.personal-cont .top .top-cont .imgIco img {
+  border-radius: 50%;
+}
+
+.personal-cont .top .top-cont .title {
+  font-size: 26px;
+}
+
+.personal-cont .top .top-cont .about {
+  font-size: 18px;
+}
+
+.personal-cont .top .top-cont .about span {
+  font-size: 16px;
+}
+
+.personal-cont .top .top-cont .rate {
+  margin-top: 40px;
+}
+
+.personal-cont .top .top-cont .rate li {
+  display: inline-block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #bdbdbd;
+}
+
+.personal-cont .top .top-cont .rate .active {
+  background: #999;
+}
+
+.personal-cont .top .top-cont .text-right:after {
+  content: '...';
+  font-size: 80px;
+  position: absolute;
+  line-height: 10px;
+  right: 0;
+  top: -20px;
+  text-align: right;
+}
+
+.personal-cont .top .top-cont .btn-primary {
+  position: relative;
+  top: 50px;
+}
+
+.personal-cont .my-course {
+  padding: 0px;
+}
+
+.personal-cont .my-course .tit {
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.personal-cont .my-course .tit .active {
+  border-bottom: solid 2px #00a4ff;
+}
+
+.personal-cont .my-course .tit span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.personal-cont .my-course .cont .col-lg-6 {
+  padding: 0px;
+}
+
+.personal-cont .my-course .cont .item {
+  border: solid 1px #999;
+  position: relative;
+  box-shadow: 2px 2px 4px #999;
+}
+
+.personal-cont .my-course .cont .item .imgIco {
+  position: absolute;
+  left: -25px;
+  top: 30px;
+}
+
+.personal-cont .my-course .cont .item .imgIco img {
+  border-radius: 50%;
+}
+
+.personal-cont .my-course .cont .item .title {
+  padding: 15px 15px 0px 30px;
+  font-size: 26px;
+}
+
+.personal-cont .my-course .cont .item .about {
+  padding: 0px 15px 0px 30px;
+  font-size: 18px;
+}
+
+.personal-cont .my-course .cont .item .time {
+  padding: 0px 15px 0px 30px;
+  font-size: 16px;
+}
+
+.personal-cont .my-course .cont .item .rate {
+  margin-top: 40px;
+  padding: 0px 15px 15px 30px;
+}
+
+.personal-cont .my-course .cont .item .rate li {
+  display: inline-block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #bdbdbd;
+}
+
+.personal-cont .my-course .cont .item .rate .active {
+  background: #999;
+}
+
+.personal-cont .my-course .cont .item div:last-child {
+  border-top: solid 1px #999;
+  padding: 10px 0;
+}
+
+.personal-cont .my-course .cont .item:after {
+  content: '...';
+  font-size: 80px;
+  position: absolute;
+  line-height: 10px;
+  right: 0;
+  top: -10px;
+  text-align: right;
+}
+
+.personal-cont .my-course .cont .col-lg-6:nth-child(2n+1) .item {
+  margin: 10px 20px 10px 0;
+}
+
+.personal-cont .my-course .cont .col-lg-6:nth-child(2n) .item {
+  margin: 10px 0px 10px 20px;
+}
+
+.personal-cont .my-collection {
+  padding: 0px;
+}
+
+.personal-cont .my-collection .col-lg-6 {
+  padding: 0px;
+}
+
+.personal-cont .my-collection .tit {
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.personal-cont .my-collection .tit span {
+  display: inline-block;
+  border-bottom: solid 2px #00a4ff;
+}
+
+.personal-cont .my-collection .item {
+  border: solid 1px #999;
+  position: relative;
+  box-shadow: 2px 2px 4px #999;
+}
+
+.personal-cont .my-collection .item .title {
+  padding: 15px 15px 0px 30px;
+  font-size: 26px;
+}
+
+.personal-cont .my-collection .item .about {
+  padding: 0px 15px 0px 30px;
+  font-size: 18px;
+}
+
+.personal-cont .my-collection .item .time {
+  padding: 0px 15px 0px 30px;
+  font-size: 16px;
+}
+
+.personal-cont .my-collection .item .rate {
+  margin-top: 40px;
+  padding: 0px 15px 15px 30px;
+}
+
+.personal-cont .my-collection .item .rate li {
+  display: inline-block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #bdbdbd;
+}
+
+.personal-cont .my-collection .item .rate .active {
+  background: #999;
+}
+
+.personal-cont .my-collection .item div:last-child {
+  border-top: solid 1px #999;
+  padding: 10px 0;
+}
+
+.personal-cont .my-collection .item:after {
+  content: '...';
+  font-size: 80px;
+  position: absolute;
+  line-height: 60px;
+  right: 0;
+  top: -40px;
+  text-align: right;
+}
+
+.personal-cont .my-collection .col-lg-6:nth-child(2n+1) .item {
+  margin: 10px 20px 10px 0;
+}
+
+.personal-cont .my-collection .col-lg-6:nth-child(2n) .item {
+  margin: 10px 0px 10px 20px;
+}

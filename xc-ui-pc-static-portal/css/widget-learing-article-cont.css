@@ -1,0 +1,413 @@
+/*
+ * colors variables
+ */
+.article-cont {
+  width: 75%;
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.article-cont .article-left-box {
+  width: 75%;
+  float: left;
+}
+
+.article-cont .article-left-box .tit-list {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.article-cont .article-left-box .tit-list a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #787d82;
+  text-decoration: none;
+}
+
+.article-cont .article-left-box .tit-list a:hover {
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .tit-list .active {
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .content .content-com {
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 30px 20px;
+  overflow: hidden;
+  position: relative;
+  color: #787d82;
+  line-height: 200%;
+}
+
+.article-cont .article-left-box .content .content-com .title {
+  color: #000;
+  text-align: center;
+  position: relative;
+  width: 10%;
+  min-width: 120px;
+  font-size: 18px;
+  float: left;
+  padding: 0px 15px;
+}
+
+.article-cont .article-left-box .content .content-com .title span {
+  position: relative;
+  height: 100%;
+}
+
+.article-cont .article-left-box .content .content-com .cont {
+  float: right;
+  width: 85%;
+}
+
+.article-cont .article-left-box .content .content-com .drop-down {
+  overflow: hidden;
+  height: 60px;
+  transition: 1s;
+}
+
+.article-cont .article-left-box .content .content-com .item .drop-down {
+  height: 0px;
+}
+
+.article-cont .article-left-box .content .about .on-off, .article-cont .article-left-box .content .suit .on-off {
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
+  color: #00a4ff;
+}
+
+.article-cont .article-left-box .content .course .cont .img-box {
+  float: left;
+  width: 120px;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box {
+  float: right;
+  width: 80%;
+  line-height: 240%;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box i {
+  text-decoration: line-through;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box em {
+  font-size: 18px;
+  color: #f07700;
+  margin-right: 10px;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box span {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box .name em {
+  font-size: 18px;
+  color: #787d82;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box .lab {
+  color: #5f1898;
+}
+
+.article-cont .article-left-box .content .course .cont .info-box .info {
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+.article-cont .article-left-box .content .prob ul, .article-cont .article-left-box .content .prob li {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.article-cont .article-left-box .content .prob li {
+  list-style: none;
+  position: relative;
+  border-bottom: solid 1px #999;
+}
+
+.article-cont .article-left-box .content .prob li i {
+  color: #00a4ff;
+  position: absolute;
+  top: 15px;
+  font-size: 12px;
+  left: -20px;
+}
+
+.article-cont .article-left-box .content .prob li p {
+  font-size: 14px;
+  padding: 0px 0 20px 0;
+}
+
+.article-cont .article-left-box .content .prob li:last-child {
+  border: none;
+}
+
+.article-cont .article-right-box {
+  width: 24%;
+  float: right;
+}
+
+.article-cont .article-right-box .comment .tit {
+  margin: 20px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #00a4ff;
+}
+
+.article-cont .article-right-box .comment .com-cont {
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .top-info {
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .top-info img {
+  float: left;
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .top-info .info {
+  float: left;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .top-info .time {
+  font-size: 14px;
+  float: right;
+  line-height: 36px;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .top-info p {
+  height: 18px;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .but-info {
+  font-size: 14px;
+  padding: 5px 0 10px 0;
+  border-bottom: solid 1px #999;
+}
+
+.article-cont .article-right-box .comment .com-cont .item .but-info span {
+  display: inline-block;
+  overflow: hidden;
+  height: 60px;
+}
+
+.article-cont .article-right-box .comment .com-cont .go-pingjia {
+  position: relative;
+  line-height: 40px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.article-cont .article-right-box .comment .com-cont .go-pingjia a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
+
+.article-cont .article-right-box .learing-box .tit {
+  margin: 30px 10px 10px 10px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #00a4ff;
+}
+
+.article-cont .article-right-box .learing-box .com-cont {
+  padding: 20px 5px 10px 5px;
+  background: #fff;
+}
+
+.article-cont .article-right-box .learing-box .com-cont .item {
+  display: inline-block;
+  width: 23%;
+  min-width: 42px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.article-cont .article-right-box .learing-box .com-cont p {
+  font-size: 12px;
+  width: 100%;
+  display: inline-block;
+}
+
+.popup-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+
+.popup-box .mask {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+}
+
+.popup-box .popup-course-box {
+  position: absolute;
+  display: none;
+  z-index: 1000;
+  background: #fff;
+  width: 80%;
+  max-width: 1199px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.popup-box .popup-course-box .title {
+  width: 100%;
+  height: 133px;
+  font-size: 32px;
+  line-height: 133px;
+  color: #fff;
+  text-align: center;
+  background: url(../img/widget-popbg.png) no-repeat;
+  background-size: cover;
+}
+
+.popup-box .popup-course-box .title span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  right: 40px;
+  top: -20px;
+  cursor: pointer;
+}
+
+.popup-box .popup-course-box .content {
+  line-height: 200%;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.popup-box .popup-course-box .content a {
+  text-decoration: none;
+  margin-top: 40px;
+  color: #fff;
+  background: #00a4ff;
+  display: inline-block;
+  padding: 2px 40px;
+}
+
+.popup-box .popup-pay-box {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+  width: 80%;
+  max-width: 1199px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.popup-box .popup-pay-box .title {
+  width: 100%;
+  font-size: 24px;
+  padding: 20px 40px;
+  color: #00a4ff;
+  text-align: left;
+  background-size: cover;
+}
+
+.popup-box .popup-pay-box .title span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #787d82;
+  position: absolute;
+  right: 40px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.popup-box .popup-pay-box .content {
+  margin: 0px 40px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #999;
+  overflow: hidden;
+}
+
+.popup-box .popup-pay-box .content img {
+  float: left;
+  margin-right: 30px;
+}
+
+.popup-box .popup-pay-box .content .info .info-tit {
+  font-weight: bold;
+  line-height: 36px;
+  font-size: 20px;
+}
+
+.popup-box .popup-pay-box .content .info .info-tit span {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 20px;
+  color: #787d82;
+  font-size: 14px;
+}
+
+.popup-box .popup-pay-box .content .info .info-pic span {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #787d82;
+  text-decoration: line-through;
+}
+
+.popup-box .popup-pay-box .content .info .info-new-pic span {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #dd340d;
+}
+
+.popup-box .popup-pay-box .fact-pic {
+  margin: 10px 40px;
+  text-align: right;
+}
+
+.popup-box .popup-pay-box .fact-pic span {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #dd340d;
+}
+
+.popup-box .popup-pay-box .go-pay {
+  text-align: center;
+  margin: 20px;
+}
+
+.popup-box .popup-pay-box .go-pay a {
+  display: inline-block;
+  background: #00a4ff;
+  font-size: 18px;
+  padding: 5px 40px;
+  color: #fff;
+}

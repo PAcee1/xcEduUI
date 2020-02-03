@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+/*
+ * colors variables
+ */
+
+/*
+ * colors variables
+ */
+footer {
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  padding: 40px 0;
+  line-height: 260%;
+}
+
+footer .btn-primary {
+  min-width: 100px;
+  margin-top: 10px;
+}
+
+footer img {
+  position: relative;
+  top: -8px;
+  left: 0px;
+}
+
+footer dt {
+  margin-bottom: 20px;
+}
+
+footer dd {
+  line-height: 200%;
+}
+
+/*
+ * colors variables
+ */
+.learing-list {
+  width: 100%;
+  background: #fff;
+}
+
+.learing-list ul, .learing-list li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.learing-list .list-box {
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.learing-list .list-box ul {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: solid 1px #ccc;
+}
+
+.learing-list .list-box ul .all {
+  padding: 1px 5px;
+  color: #fff;
+  background: #00a4ff;
+}
+
+.learing-list .list-box ul:last-child {
+  border: none;
+}
+
+.learing-list .list-box li {
+  padding: 1px 15px;
+  margin: 0 3px;
+  float: left;
+}
+
+.learing-list .active {
+  color: #fff;
+  background: #00a4ff;
+}
+
+.learing-list .more {
+  position: absolute;
+  text-decoration: none;
+  right: 10px;
+}
+
+/*
+ * colors variables
+ */
+.list-cont-left {
+  margin: 15px 0px;
+}
+
+.list-cont-left .tit {
+  margin-bottom: 10px;
+}
+
+.list-cont-left .tit ul {
+  border: none;
+}
+
+.list-cont-left .tit li {
+  border: none;
+}
+
+.list-cont-left .tit .active {
+  color: #00a4ff;
+}
+
+.list-cont-left .tit .nav-tabs > li.active > a, .list-cont-left .tit .nav-tabs > li.active > a:hover, .list-cont-left .tit .nav-tabs > li.active > a:focus {
+  border: solid 1px #f4f4f4 !important;
+  background: none !important;
+}
+
+.list-cont-left .tit .page {
+  margin-top: 11px;
+  margin-right: 20px;
+}
+
+.list-cont-left .tit .page a {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  color: #999;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+
+.list-cont-left .nav-tabs a {
+  color: #050505;
+}
+
+.list-cont-left .nav-tabs .active a {
+  background: none;
+  border: solid 1px #f4f4f4 !important;
+  color: #00a4ff !important;
+}
+
+.list-cont-left .content-list {
+  background: #000000;
+}
+
+.list-cont-left .content-list li {
+  display: inline-block;
+  float: left;
+}
+
+.list-cont-left .content-list li .tit {
+  color: #363c40;
+  font-size: 16px;
+  line-height: 200%;
+  position: relative;
+}
+
+.list-cont-left .content-list img {
+  width: 100%;
+  height: 135px;
+}
+
+.list-cont-left .content-list div:nth-child(4n+1) {
+  margin-left: 0px;
+}
+
+.list-cont-left .content-list .recom-item {
+  padding-bottom: 20px;
+  background: #fff;
+  margin-bottom: 15px;
+  width: 23.5%;
+  margin-left: 1.9%;
+  float: left;
+}
+
+.list-cont-left .content-list .recom-item p {
+  position: relative;
+}
+
+.list-cont-left .content-list .recom-item p .lab {
+  font-size: 12px;
+  text-align: center;
+  width: 41px;
+  height: 24px;
+  line-height: 22px;
+  color: #f07700;
+  position: absolute;
+  right: -4px;
+  top: 10px;
+  background: url(/img/widget-hotIco.png) no-repeat;
+}
+
+.list-cont-left .content-list .recom-item ul {
+  padding: 25px;
+  font-size: 14px;
+}
+
+.list-cont-left .content-list .recom-item ul li {
+  list-style: none;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) {
+  margin-top: 20px;
+  color: #999;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) span {
+  color: #ff7c2d;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) em {
+  font-weight: bold;
+}
+
+.list-cont-left .content-list .recom-item a {
+  color: #050505;
+  text-decoration: none;
+}
+
+.list-cont-left .content-list .recom-item:hover {
+  box-shadow: 0px 0px 4px #999;
+}
+
+/*
+ * colors variables
+ */
+.list-cont-right {
+  margin: 15px 0px;
+}
+
+.list-cont-right .right-box {
+  padding: 0 15px;
+}
+
+.list-cont-right .tit {
+  font-size: 16px;
+  text-align: left;
+  line-height: 36px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: #00a4ff;
+}
+
+.list-cont-right .contList {
+  background: #fff;
+}
+
+.list-cont-right .contList .contList-titA {
+  padding: 15px;
+  color: #fff;
+  background: url(/img/widget-topBg.png) no-repeat;
+  background-size: cover;
+}
+
+.list-cont-right .contList .contList-item {
+  margin: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #ccc;
+}
+
+.list-cont-right .contList .contList-item p {
+  line-height: 20px;
+}
+
+.list-cont-right .contList .contList-item li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.list-cont-right .contList .contList-item span {
+  color: #ff7c2d;
+}
+
+.list-cont-right .contList .contList-item em {
+  font-weight: bold;
+}
+
+.list-cont-right .contList .contList-item:last-child {
+  border: none;
+}
+
+.list-cont-right .contList .contList-titB {
+  padding: 15px;
+  color: #fff;
+  background: url(/img/widget-btnBg.png) no-repeat;
+  background-size: cover;
+}
+
+.list-row-left {
+  padding: 0;
+}
+
+.list-row-rit {
+  padding: 0px;
+  padding-left: 15px;
+}

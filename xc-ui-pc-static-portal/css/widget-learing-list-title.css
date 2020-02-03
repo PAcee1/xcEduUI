@@ -1,0 +1,53 @@
+/*
+ * colors variables
+ */
+.learing-list {
+  width: 100%;
+  background: #fff;
+}
+
+.learing-list ul, .learing-list li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.learing-list .list-box {
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.learing-list .list-box ul {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: solid 1px #ccc;
+}
+
+.learing-list .list-box ul .all {
+  padding: 1px 5px;
+  color: #fff;
+  background: #00a4ff;
+}
+
+.learing-list .list-box ul:last-child {
+  border: none;
+}
+
+.learing-list .list-box li {
+  padding: 1px 15px;
+  margin: 0 3px;
+  float: left;
+}
+
+.learing-list .active {
+  color: #fff;
+  background: #00a4ff;
+}
+
+.learing-list .more {
+  position: absolute;
+  text-decoration: none;
+  right: 10px;
+}

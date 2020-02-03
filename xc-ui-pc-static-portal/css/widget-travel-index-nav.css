@@ -1,0 +1,154 @@
+/*
+ * colors variables
+ */
+.travel-index-nav {
+  z-index: 50;
+  position: relative;
+  float: left;
+  left: 0px;
+  top: 0px;
+  width: 190px;
+}
+
+.travel-index-nav a {
+  color: #797979;
+}
+
+.travel-index-nav a:hover {
+  color: #00a4ff;
+  text-decoration: none;
+}
+
+.travel-index-nav .citylistbox {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.travel-index-nav .citylistbox .title {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.travel-index-nav .citylistbox .listbox {
+  border-top: 1px solid transparent;
+}
+
+.travel-index-nav .citylistbox .listbox:first-child {
+  border-top: none;
+}
+
+.travel-index-nav .citylistbox .listbox:last-child {
+  border-bottom: none;
+}
+
+.travel-index-nav .citylistbox .listbox .list {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.travel-index-nav .citylistbox .listbox .list .icon {
+  width: 28px;
+  height: 28px;
+  float: left;
+}
+
+.travel-index-nav .citylistbox .listbox .list dl {
+  width: 242px;
+  margin: 0;
+}
+
+.travel-index-nav .citylistbox .listbox .list dl dt {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.travel-index-nav .citylistbox .listbox .list dl dt::after {
+  content: '>';
+  position: absolute;
+  right: 0px;
+}
+
+.travel-index-nav .citylistbox .listbox .box {
+  display: none;
+  height: 410px !important;
+  _height: 410px;
+  *height: 410px;
+  width: 429px;
+  position: absolute;
+  margin-left: 186px;
+  top: 0;
+  box-shadow: 2px 0 6px #ccc;
+  padding: 12px;
+  background-color: #fff;
+  border: 0px solid #00a4ff;
+  z-index: 20;
+}
+
+.travel-index-nav .citylistbox .hover {
+  width: 200px;
+  color: #00a4ff;
+  z-index: 21;
+}
+
+.travel-index-nav .citylistbox .hover.listbox .list dt::after {
+  content: '>';
+  position: absolute;
+  right: 10px;
+}
+
+.travel-index-nav .citylistbox .hover:first-child {
+  margin-top: 0;
+}
+
+.travel-index-nav .citylistbox .hover:last-child {
+  border-bottom: none;
+}
+
+.travel-index-nav .citylistbox .hover .list {
+  border: 0;
+  z-index: 21;
+}
+
+.my-class-box {
+  position: relative;
+  z-index: 50;
+  float: right;
+  min-width: 230px;
+  top: 30px;
+  background: #fff;
+}
+
+.my-class-box div {
+  margin: 10px 20px 0px 20px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  border-bottom: solid 1px #999;
+}
+
+.my-class-box div p:nth-child(2) {
+  font-size: 12px;
+  color: #787d82;
+}
+
+.my-class-box div:last-child {
+  border: none;
+  text-align: center;
+}
+
+.my-class-box div:last-child a {
+  display: block;
+  border: solid 1px #00a4ff;
+  line-height: 40px;
+}
+
+.my-class-box .title {
+  margin: 0px;
+  padding: 15px 20px;
+  border: none;
+  background: #9bceea;
+}

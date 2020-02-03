@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>WebUploader演示</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/webuploader/webuploader.css" />
+    <script type="text/javascript" src="/static/plugins/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/static/plugins/webuploader/dist/webuploader.js"></script>
+
+</head>
+<body>
+<!-- 上传文件区域 -->
+<div id="uploader">
+    <!-- 用于选择文件 -->
+    <div id="filePicker">选择文件</div>
+    <!-- 用于显示文件列表 -->
+    <div id="fileList"></div>
+</div>
+<!-- 3.添加js代码 -->
+<script type="text/javascript">
+    // 监听分块上传的时间点，断点续传
+    var fileMd5;
+    WebUploader.Uploader.register({
+            "before-send-file":"beforeSendFile",
+            "before-send":"beforeSend",
+            "after-send-file":"afterSendFile"
+        },{
+            beforeSendFile:function(file) {
+                // 创建一个deffered,用于通知是否完成操作
+                var deferred = WebUploader.Deferred();
+                // 计算文件的唯一标识，用于断点续传和秒传
+                (new WebUploader.Uploader()).md5File(file, 0, 100*1024*1024)
+//                    .progress(function(percentage){
+//                        alert(percentage)
+//                        console.log("progress="+percentage)
+//                        //$("#"+file.id).find("span.state").text("正在获取文件信息...");
+//                    })
+                    .then(function(val) {
+                        fileMd5 = val;
+
+                        //alert(fileMd5 )
+                        //向服务端请求注册 上传文件
+                        $.ajax(
+                            {
+                                type:"POST",
+                                url:"/openapi/media/upload/register",
+                                data:{
+                                    // 文件唯一表示
+                                    fileMd5:fileMd5,
+                                    fileName: file.name,
+                                    fileSize:file.size
+                                },
+                                dataType:"json",
+                                success:function(response) {
+                                    if(response.success) {
+                                        //$("#" + file.id).find("span.state").text("成功获取文件信息"+fileMd5);
+                                        alert('上传文件注册成功开始上传');
+                                        deferred.resolve();
+                                    } else {
+                                        alert('上传文件注册失败');
+                                        deferred.reject();
+                                    }
+                                }
+                            }
+                        );
+                        // 状态改为已完成
+                        //deferred.resolve();
+                    });
+//                //向formData中放数据，每次上传分块都传这两个参数
+//                this.owner.options.formData.fileName = file.name;
+//                this.owner.options.formData.fileSize = file.size;
+                //生产新的deferred对象防止外部修改状态
+                return deferred.promise();
+            },
+            beforeSend:function(block) {
+                var deferred = WebUploader.Deferred();
+
+                // 支持断点续传，发送到后台判断是否已经上传过
+                $.ajax(
+                    {
+                        type:"POST",
+                        url:"/openapi/media/upload/checkchunk",
+                        data:{
+                            // 文件唯一表示
+                            fileMd5:fileMd5,
+                            // 当前分块下标
+                            chunk:block.chunk,
+                            // 当前分块大小
+                            chunkSize:block.end-block.start
+                        },
+                        dataType:"json",
+                        success:function(response) {
+                            if(response.ifExist) {
+                                // 分块存在，跳过该分块
+                                deferred.reject();
+                            } else {
+                                // 分块不存在或不完整，重新发送
+                                deferred.resolve();
+                            }
+                        }
+                    }
+                );
+
+                // 发送文件md5字符串到后台
+                this.owner.options.formData.fileMd5 = fileMd5;
+                return deferred.promise();
+            },
+            afterSendFile:function() {
+                // 通知合并分块
+                $.ajax(
+                    {
+                        type:"POST",
+                        url:"/openapi/media/upload/mergechunks",
+                        data:{
+                            fileMd5:fileMd5
+                        },
+                        success:function(response){
+
+                        }
+                    }
+                );
+            }
+        }
+    );
+
+    // 上传基本配置
+    var uploader = WebUploader.create(
+        {
+            swf:"/static/plugins/webuploader/dist/Uploader.swf",
+            server:"/openapi/media/upload/uploadchunk",
+            fileVal:"file",//文件上传域的name
+            pick:"#filePicker",
+            auto:false,//手动决定开始上传
+//            dnd:"#dndArea",
+            disableGlobalDnd:true,
+
+            // 分块上传设置
+            // 是否分块
+            chunked:true,
+            // 每块文件大小（默认5M）
+            chunkSize:1*1024*1024,
+            // 开启几个并发线程（默认3个）
+            threads:3,
+            // 在上传当前文件时，准备好下一个文件
+            prepareNextFile:true
+        }
+    );
+
+    // 生成缩略图和上传进度
+    uploader.on("fileQueued", function(file) {
+            // 把文件信息追加到fileList的div中
+            $("#fileList").append("<div id='" + file.id + "'><img/><span>" + file.name + "</span>" +
+                "<div><span class='percentage'>0%</span></div>" +
+                "<div><input type='button' onclick=\"upload('"+file.id+"')\" value='开始'/></div>" +
+                "</div>");
+
+        }
+    );
+    uploader.on("beforeFileQueued", function(file) {
+       var files = uploader.getFiles();
+       if(files ){
+           if(files.length>0){
+               alert("一次只允许上传一个文件");
+               return false;
+           }
+       }
+    });
+
+    // 监控上传进度
+    // percentage:代表上传文件的百分比
+    uploader.on("uploadProgress", function(file, percentage) {
+        $("#" + file.id).find("span.percentage").text(Math.round(percentage * 100) + "%");
+    });
+    uploader.on("uploadError", function(file,reason) {
+        console.log(reason)
+        alert("上传文件失败，请刷新页面重试！");
+    });
+    uploader.on("uploadSuccess", function(file,response ) {
+        console.log(response)
+        alert("上传文件成功！");
+    });
+
+    //开始上传
+    function upload(fileId){
+        uploader.upload(fileId);
+    }
+
+</script>
+</body>
+
+
+
+</html>

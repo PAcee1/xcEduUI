@@ -1,0 +1,939 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+/*
+ * colors variables
+ */
+header {
+  width: 100%;
+  background: #fff;
+}
+
+header a {
+  color: #333;
+}
+
+header a:hover {
+  color: #ff7c2d;
+  text-decoration: none;
+}
+
+header .navbar {
+  min-width: 1024px;
+  margin: 0 auto;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+header .navbar .logo {
+  width: 195px;
+  float: left;
+  min-width: 110px;
+  margin-right: 2%;
+}
+
+header .navbar .starch {
+  float: right;
+  min-width: 326px;
+  margin-right: 5%;
+}
+
+header .navbar .sign-in {
+  float: right;
+}
+
+header .navbar .sign-in a {
+  color: #14191f;
+}
+
+header .navbar .sign-in span {
+  color: #787d82;
+}
+
+header .navbar .sign-in .personal {
+  color: #787d82;
+}
+
+header .navbar .sign-in .personal .personalIco::before {
+  content: ' ● ';
+  color: red;
+  font-weight: bold;
+  right: 1px;
+  top: -8px;
+  position: absolute;
+}
+
+header .navbar .sign-in .personal span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 6px;
+  margin-left: 8px;
+  background: url(../img/asset-personalIco.png) no-repeat;
+}
+
+header .navbar .sign-in .myInfo {
+  color: #787d82;
+}
+
+header .navbar .sign-in .myInfo img {
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+  top: -2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+header .navbar-nav {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+header .navbar-nav li a {
+  padding: 9px 15px !important;
+}
+
+header .active {
+  border-bottom: solid 2px #00a4ff;
+}
+
+header .sign-in {
+  margin-top: 12px;
+  margin-right: 0px;
+}
+
+header .sign-in a {
+  color: #00a4ff;
+}
+
+header .learingHeader {
+  max-width: 1366px;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+header input {
+  height: 35px;
+  margin-top: 7px;
+}
+
+header .input-search {
+  border: solid 2px #00a4ff;
+  width: 280px;
+  padding-left: 10px;
+}
+
+header .search-buttom {
+  border: solid 2px #00a4ff;
+  background: #00a4ff;
+  color: #fff;
+  font-weight: bold;
+  width: 14%;
+  max-width: 80px;
+}
+
+/*
+ * colors variables
+ */
+footer {
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  padding: 40px 0;
+  line-height: 260%;
+}
+
+footer .btn-primary {
+  min-width: 100px;
+  margin-top: 10px;
+}
+
+footer img {
+  position: relative;
+  top: -8px;
+  left: 0px;
+}
+
+footer dt {
+  margin-bottom: 20px;
+}
+
+footer dd {
+  line-height: 200%;
+}
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.course-page-left {
+  margin-top: 15px;
+}
+
+.course-page-left .nav {
+  background: #fff;
+}
+
+.course-page-left .nav li {
+  border-bottom: solid 1px #ddd;
+}
+
+.course-page-left .nav li i {
+  font-size: 12px;
+}
+
+.course-page-left .nav li a {
+  padding: 20px;
+  color: #787d82;
+}
+
+.course-page-left .nav .cls {
+  padding-left: 35px;
+}
+
+.course-page-left .nav .active a {
+  color: #00a4ff !important;
+}
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../img/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.page-index-cont .title {
+  background: #fff;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.page-index-cont .teach-info {
+  background: #fff;
+  margin: 20px 0;
+}
+
+.page-index-cont .teach-info .top {
+  padding: 10px 15px 15px 15px;
+  border-bottom: solid 1px #f4f4f4;
+}
+
+.page-index-cont .teach-info .top .ico {
+  display: inline-block;
+}
+
+.page-index-cont .teach-info .top .ico img {
+  border-radius: 50%;
+}
+
+.page-index-cont .teach-info .top .name {
+  display: inline-block;
+  font-size: 22px;
+  position: relative;
+  top: 12px;
+  margin-left: 14px;
+}
+
+.page-index-cont .teach-info .top .about {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  top: 13px;
+  margin-left: 10px;
+  color: #787d82;
+}
+
+.page-index-cont .teach-info .top .close {
+  margin-top: 10px;
+}
+
+.page-index-cont .teach-info .info-text {
+  padding: 15px;
+}
+
+.page-index-cont .course-info {
+  background: #fff;
+  margin: 20px 0;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.page-index-cont .course-info .bottom {
+  margin: 30px 0 15px 0;
+}
+
+.page-index-cont .course-info .bottom .speed-item .act {
+  background: #787d82;
+}
+
+.page-index-cont .course-info .bottom .speed-item span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f4f4f4;
+  margin-right: 10px;
+}
+
+.page-index-cont .course-info .bottom .speed-item em {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-index-cont .course-list .list-cls {
+  height: 45px;
+  overflow: hidden;
+  padding: 5px 20px;
+  transition: 1s;
+  background: #fff;
+  margin: 20px 0;
+  line-height: 40px;
+  font-size: 18px;
+  border-bottom: solid 1px #f4f4f4;
+}
+
+.page-index-cont .course-list .list-cls .tit {
+  border-bottom: solid 1px #f4f4f4;
+  color: #333;
+}
+
+.page-index-cont .course-list .list-cls .tit span:first-child {
+  margin-right: 20px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .top h4 {
+  display: inline-block;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .top span {
+  color: #787d82;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .top .info {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item div {
+  border-bottom: dashed 1px #bdbdbd;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item div:last-child {
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item .tit {
+  border-bottom: solid 1px #787d82;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item .tit i {
+  margin-right: 5px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item .item {
+  padding-left: 15px;
+}
+
+.page-index-cont .course-list .list-cls .drop-down .cont-item .item span em {
+  border: solid 1px #ddd;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.page-index-cont .course-list .glyphicon-save:before {
+  position: relative;
+  top: 1px;
+  font-size: 16px;
+  padding-right: 10px;
+  color: #787d82;
+}

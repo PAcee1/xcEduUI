@@ -1,0 +1,136 @@
+/*
+ * colors variables
+ */
+.list-cont-left {
+  margin: 15px 0px;
+}
+
+.list-cont-left .tit {
+  margin-bottom: 10px;
+}
+
+.list-cont-left .tit ul {
+  border: none;
+}
+
+.list-cont-left .tit li {
+  border: none;
+}
+
+.list-cont-left .tit .active {
+  color: #00a4ff;
+}
+
+.list-cont-left .tit .nav-tabs > li.active > a, .list-cont-left .tit .nav-tabs > li.active > a:hover, .list-cont-left .tit .nav-tabs > li.active > a:focus {
+  border: solid 1px #f4f4f4 !important;
+  background: none !important;
+}
+
+.list-cont-left .tit .page {
+  margin-top: 11px;
+  margin-right: 20px;
+}
+
+.list-cont-left .tit .page a {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  color: #999;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+
+.list-cont-left .nav-tabs a {
+  color: #050505;
+}
+
+.list-cont-left .nav-tabs .active a {
+  background: none;
+  border: solid 1px #f4f4f4 !important;
+  color: #00a4ff !important;
+}
+
+.list-cont-left .content-list {
+  background: #000000;
+}
+
+.list-cont-left .content-list li {
+  display: inline-block;
+  float: left;
+}
+
+.list-cont-left .content-list li .tit {
+  color: #363c40;
+  font-size: 16px;
+  line-height: 200%;
+  position: relative;
+}
+
+.list-cont-left .content-list img {
+  width: 100%;
+  height: 135px;
+}
+
+.list-cont-left .content-list div:nth-child(4n+1) {
+  margin-left: 0px;
+}
+
+.list-cont-left .content-list .recom-item {
+  padding-bottom: 20px;
+  background: #fff;
+  margin-bottom: 15px;
+  width: 23.5%;
+  margin-left: 1.9%;
+  float: left;
+}
+
+.list-cont-left .content-list .recom-item p {
+  position: relative;
+}
+
+.list-cont-left .content-list .recom-item p .lab {
+  font-size: 12px;
+  text-align: center;
+  width: 41px;
+  height: 24px;
+  line-height: 22px;
+  color: #f07700;
+  position: absolute;
+  right: -4px;
+  top: 10px;
+  background: url(../img/widget-hotIco.png) no-repeat;
+}
+
+.list-cont-left .content-list .recom-item ul {
+  padding: 25px;
+  font-size: 14px;
+}
+
+.list-cont-left .content-list .recom-item ul li {
+  list-style: none;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) {
+  margin-top: 20px;
+  color: #999;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) span {
+  color: #ff7c2d;
+}
+
+.list-cont-left .content-list .recom-item ul li:nth-child(2) em {
+  font-weight: bold;
+}
+
+.list-cont-left .content-list .recom-item a {
+  color: #050505;
+  text-decoration: none;
+}
+
+.list-cont-left .content-list .recom-item:hover {
+  box-shadow: 0px 0px 4px #999;
+}

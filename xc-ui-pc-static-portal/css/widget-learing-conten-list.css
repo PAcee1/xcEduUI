@@ -1,0 +1,218 @@
+/*
+ * colors variables
+ */
+.conten-list .Recommend .title {
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+}
+
+.conten-list .Recommend .title a {
+  position: absolute;
+  font-size: 12px;
+  color: #787d82;
+  top: 10px;
+  right: 20px;
+}
+
+.conten-list .Recommend .title-class {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+}
+
+.conten-list .Recommend .title-class .course-nav {
+  display: inline-block;
+  max-width: 385px;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  color: #787d82;
+  transform: translateX(-70%);
+}
+
+.conten-list .Recommend .title-class .course-nav span {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+.conten-list .Recommend .title-class a {
+  position: absolute;
+  font-size: 12px;
+  color: #787d82;
+  top: 10px;
+  right: 20px;
+}
+
+.conten-list .Recommend .content {
+  overflow: hidden;
+}
+
+.conten-list .Recommend .content div:nth-child(5n+1) {
+  margin-left: 0px;
+}
+
+.conten-list .Recommend .content .recom-item {
+  background: #fff;
+  margin: 10px 0;
+  width: 18.8%;
+  margin-left: 1.5%;
+  float: left;
+}
+
+.conten-list .Recommend .content .recom-item p {
+  position: relative;
+}
+
+.conten-list .Recommend .content .recom-item p .lab {
+  font-size: 12px;
+  text-align: center;
+  width: 41px;
+  height: 24px;
+  line-height: 22px;
+  color: #f07700;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  background: url(../img/widget-hotIco.png) no-repeat;
+}
+
+.conten-list .Recommend .content .recom-item ul {
+  padding: 25px;
+  font-size: 14px;
+}
+
+.conten-list .Recommend .content .recom-item ul li {
+  list-style: none;
+}
+
+.conten-list .Recommend .content .recom-item ul li:nth-child(2) {
+  margin-top: 20px;
+  color: #999;
+}
+
+.conten-list .Recommend .content .recom-item ul li:nth-child(2) span {
+  color: #ff7c2d;
+}
+
+.conten-list .Recommend .content .recom-item ul li:nth-child(2) em {
+  font-weight: bold;
+}
+
+.conten-list .Recommend .content .recom-item a {
+  color: #050505;
+  text-decoration: none;
+}
+
+.conten-list .Recommend .content .recom-item:hover {
+  box-shadow: 0px 0px 4px #999;
+}
+
+.conten-list .course-box {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.conten-list .course-box .title {
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+}
+
+.conten-list .course-box .title .course-nav {
+  display: inline-block;
+  max-width: 385px;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  color: #787d82;
+  transform: translateX(-70%);
+}
+
+.conten-list .course-box .title .course-nav span {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+.conten-list .course-box .title a {
+  position: absolute;
+  font-size: 12px;
+  color: #787d82;
+  top: 10px;
+  right: 20px;
+}
+
+.conten-list .course-box .content .cont-left {
+  width: 20%;
+  max-width: 228px;
+  float: left;
+}
+
+.conten-list .course-box .content .cont-right {
+  width: 78%;
+  max-width: 890px;
+  float: right;
+}
+
+.conten-list .course-box .content .cont-right div:nth-child(2) {
+  margin-left: 0;
+}
+
+.conten-list .course-box .content .cont-right .recom-item {
+  background: #fff;
+  margin: 15px 0;
+  width: 23.5%;
+  margin-left: 2%;
+  float: left;
+}
+
+.conten-list .course-box .content .cont-right .recom-item p {
+  position: relative;
+}
+
+.conten-list .course-box .content .cont-right .recom-item p .lab {
+  font-size: 12px;
+  text-align: center;
+  width: 41px;
+  height: 24px;
+  line-height: 22px;
+  color: #f07700;
+  position: absolute;
+  right: -5px;
+  top: 10px;
+  background: url(../img/widget-hotIco.png) no-repeat;
+}
+
+.conten-list .course-box .content .cont-right .recom-item ul {
+  padding: 25px;
+  font-size: 14px;
+}
+
+.conten-list .course-box .content .cont-right .recom-item ul li {
+  list-style: none;
+}
+
+.conten-list .course-box .content .cont-right .recom-item ul li:nth-child(2) {
+  margin-top: 20px;
+  color: #999;
+}
+
+.conten-list .course-box .content .cont-right .recom-item ul li:nth-child(2) span {
+  color: #ff7c2d;
+}
+
+.conten-list .course-box .content .cont-right .recom-item ul li:nth-child(2) em {
+  font-weight: bold;
+}
+
+.conten-list .course-box .content .cont-right .recom-item a {
+  color: #050505;
+  text-decoration: none;
+}
+
+.conten-list .active {
+  color: #00a4ff;
+}

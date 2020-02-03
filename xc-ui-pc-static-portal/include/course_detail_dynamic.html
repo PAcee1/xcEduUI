@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="/js/vue/vue.min.js"></script>
+    <script src="/js/jwt-decode/jwt-decode.min.js"></script>
+    <script src="/js/base64.min.js"></script>
+    <script src="/js/axios/axios.min.js"></script>
+    <script src="/js/querystring/index.js"></script>
+    <script src="/js/public.js"></script>
+    <script src="/js/order.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/css/el/index.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body >
+<!-- 页面 css js -->
+<script type="text/javascript" src="/static/plugins/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/static/plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $('.vid-act').click(function() {
+        $(this).find('.i-heart').css('background-position', '4px -55px')
+    })
+
+
+    $(function() {
+        //点击下拉
+        //用法：HTML 点击事件为more,父级使用overflow：hidden；限定高 more与要展开的内容为同级 要展开内容添加 drop-down的class
+        function ckMove(target, ckgar, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find(ckgar).on('click', function() {
+                var h = $(this).parent().find('.drop-down ul').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        //章节收缩
+        ckMove('.article-cont .article-left-box', '.title', 0);
+
+        /* $('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    /*$(function() {
+     $('.learing-box .item-list').mouseover(function(e) {
+     $(this).css({
+     'height': '140px'
+     }).addClass('hov').siblings().css({
+     'height': '50px'
+     })
+     $(this).siblings().removeClass('hov')
+     })
+     $('.learing-box .item-box').mouseout(function() {
+     $(this).find('.item-list:first').css({
+     'height': '140px'
+     }).addClass('hov')
+     $(this).find('.item-list:first').siblings().css({
+     'height': '50px'
+     }).removeClass('hov')
+     })
+     })*/
+
+
+    $(function() {
+        $('.active-box span').click(function() {
+            $(this).css({
+                'color': '#00a4ff'
+            })
+            if ($(this).find('i').hasClass('i-laud')) {
+                $(this).find('.i-laud').css('background-position', '-80px -19px')
+            } else if ($(this).find('i').hasClass('i-coll')) {
+                $(this).find('.i-coll').css('background-position', '1px -75px')
+            }
+        })
+        /*$('.learing-box .item-list').mouseover(function(e) {
+         $(this).css({
+         'height': '140px'
+         }).addClass('hov').siblings().css({
+         'height': '50px'
+         })
+         $(this).siblings().removeClass('hov')
+         })
+         $('.learing-box .item-box').mouseout(function() {
+         $(this).find('.item-list:first').css({
+         'height': '140px'
+         }).addClass('hov')
+         $(this).find('.item-list:first').siblings().css({
+         'height': '50px'
+         }).removeClass('hov')
+         })*/
+    })
+
+
+    $(function() {
+        //评分
+        $('.star .score').map(function(n, i) {
+            var x = Number($(this).find('i').text());
+            var w = 109 * (1 - x / 5);
+            $(this).css('width', w + 'px');
+        })
+        //评论打分
+        $('.evaluate .star').mousemove(function(e) {
+            var startX = $(this).offset().left;
+            var movX = e.clientX - startX + 0.5;
+            var w = 145 * (1 - movX / 145);
+            $(this).find('.score').css('width', w + 'px');
+            $('.star-score i').text((movX / 145 * 5).toFixed(1))
+        })
+        //星级评分
+        $('.grade').map(function(n, i) {
+            var pret = $(this).find('.percent-num i').text();
+            var wt = $(this).find('.grade-percent').width();
+            $(this).find('.grade-percent span').css('width', wt * pret / 100);
+        })
+
+
+
+    })
+
+
+    $(function() {
+        //点击下拉
+        function ckMove(target, het, text, incr) {
+            var inc = incr ? incr : 0;
+            $(target).find('.on-off').on('click', function() {
+                var h = $(this).parent().find('.drop-down p').height();
+                if (!$(this).hasClass('act')) {
+                    $(this).addClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': (h + inc) + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-bot').addClass('i-chevron-top')
+                } else {
+                    $(this).removeClass('act');
+                    $(this).parent().find('.drop-down').css({
+                        'height': het + 'px'
+                    });
+                    $(this).find('i').removeClass('i-chevron-top').addClass('i-chevron-bot')
+                }
+            })
+        }
+        ckMove('.cktop', 60);
+        ckMove('.cont .item', 0);
+        //点击关闭弹窗
+        $('.close-popup').click(function() {
+            $('.popup-box').hide();
+        })
+        $('.tit-list a').click(function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            var clasNod = '.' + $(this)[0].id
+            $(clasNod).show().siblings().hide()
+        })
+        // 资料下载
+        $('.down-fill span').click(function() {
+            $('.down-fill ul').css({
+                display: 'block'
+            });
+        })
+        $('.down-fill ul li').click(function() {
+            $('.down-fill ul').css({
+                display: 'none'
+            });
+        })
+    })
+</script>
+<script>
+
+   var body= new Vue({   //创建一个Vue的实例
+        el: "#body", //挂载点是id="app"的地方
+
+        data: {
+            editLoading: false,
+            title:'测试',
+            courseId:'',
+            charge:'',//203001免费,203002收费
+            learnstatus:0,//课程状态，1：马上学习，2：立即报名、3：立即购买
+            course:{},
+            companyId:'template',
+            company_stat:[],
+            course_stat:{"s601001":"","s601002":"","s601003":""}
+
+
+        },
+        methods: {
+            //学习报名
+            addopencourse(){
+                let activeUser= checkActiveUser();
+                if(activeUser){
+                    addOpencourse(this.courseId).then((res) => {
+                        if(res.success){//报名成功
+                            this.$message.success('报名成功');
+                            this.getLearnstatus()
+                        }else if(res.message){
+                            this.$message.error(res.message);
+                        }else{
+                            this.$message.error('报名失败，请刷新页面重试!');
+                        }
+                    })
+                }else{
+                    //弹出登录框架
+                    headVm.showlogin()
+                }
+            },
+            //立即购买
+            buy(){
+                let activeUser= getActiveUser();
+                if(activeUser){
+                    $('.popup-box').show()
+                }else{
+                    //弹出登录框架
+                    headVm.showlogin()
+                }
+
+            },
+            createOrder(){
+                createOrder(this.courseId).then((res) => {
+                        this.editLoading = false;
+                        if(res.success){
+                            this.$message.success('订单创建成功');
+                            //跳转到支付页面
+                            window.location = "http://ucenter.xuecheng.com/#/pay/"+res.xcOrders.orderNumber
+                        }else{
+                            if(res.message){
+                                this.$message.error(res.message);
+                            }else{
+                                this.$message.error('订单创建失败，请刷新页面重试');
+                            }
+                        }
+                    },
+                    (res) => {
+                        this.editLoading = false;
+                    });
+            },
+            getLearnstatus(){//获取学习状态
+                //初始学习状态
+                //根据课程收费判断
+                if(this.charge == '203001'){
+                    this.learnstatus = 2 //免费，报名后即可学习
+                }else{
+                    this.learnstatus = 3 //收费，需要购买后可学习
+                }
+                //如果用户登录判断该用户的学习状态
+                let activeUser= getActiveUser();
+                if(activeUser){
+                    //判断学生的选课状态
+                    /*queryLearnstatus(this.courseId).then((res)=>{
+                        console.log(res)
+                        if(res.success){
+                            if(res.status == '501001'){//正常
+                                this.learnstatus = 1 //选课状态正常，立即学习
+                            }
+                        }
+                    })*/
+                }
+            }
+
+        },
+       created() {
+           this.courseId = courseId;
+           this.charge = charge
+           this.getLearnstatus();
+           //获取教育机构的统计数据
+           queryCompanyStat(this.companyId).then((res)=>{
+               console.log(res)
+               if(res.stat){
+                   this.company_stat = res.stat
+                   console.log(this.company_stat)
+               }
+
+           })
+           //获取课程的统计数据
+           queryCourseStat(this.courseId).then((res)=>{
+               console.log(res)
+               if(res.stat){
+                   let stat = res.stat
+                  for(var i=0;i<stat.length;i++){
+                      this.course_stat['s'+stat[i].id] = stat[i].value
+                  }
+               }
+               console.log(this.course_stat)
+
+           })
+
+
+        },
+        mounted(){
+           // alert(courseId)
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/*
+ * colors variables
+ */
+.article-nav {
+  padding: 0px;
+}
+
+.article-nav .navbar-collapse {
+  background: #fff;
+  padding: 0px;
+  width: 200px;
+}
+
+.article-nav .nav-stacked {
+  overflow: auto;
+}
+
+.article-nav .nav-stacked .active {
+  background: #00a4ff;
+}
+
+.article-nav .nav-stacked .active a {
+  color: #fff;
+}
+
+.article-nav .nav-stacked li > a:hover {
+  color: #fff;
+  background: #00a4ff;
+}
+
+.article-nav .nav-stacked a {
+  font-size: 18px;
+  color: #333;
+}
+
+.article-nav .nav-stacked .but {
+  background: #f4f4f4;
+  padding: 15px 0;
+  margin: 15px;
+}
+
+.article-nav .nav-stacked .but p {
+  margin: 0;
+  color: #fff;
+}
+
+.article-nav .nav-stacked .but p:nth-child(2) {
+  font-size: 12px;
+}
