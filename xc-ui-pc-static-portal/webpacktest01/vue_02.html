@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js常用指令的测试</title>
+</head>
+<body>
+<!--实现在body区域显示一个传智播客名称-->
+<div id="app">
+    <!--相当于MVVM的view视图-->
+    <!--{{name}}-->
+    <a v-bind:href="url">
+    <span v-text="name"></span>
+    </a>
+    <input type="text" v-model="num1"/> +
+    <input type="text" v-model="num2"/>=
+   <!-- <span v-text="Number.parseInt(num1)+Number.parseInt(num2)"></span>-->
+    <span v-text="result"></span>
+    <!--{{Number.parseInt(num1)+Number.parseInt(num2)}}-->
+    <button v-on:click="change">计算</button>
+</div>
+</body>
+<!--<script src="vue.min.js"></script>-->
+<script src="build.js"></script>
+<script>
+    //编写MVVM中的model部分及VM（ViewModel）部分
+
+</script>
+</html>
