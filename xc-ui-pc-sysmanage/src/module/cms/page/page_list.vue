@@ -1,9 +1,29 @@
 <template>
 <div>
   <!-- template里存放model -->
-  <!-- 查询按钮 -->
-  <el-button type="primary" size="small" v-on:click="query">查询</el-button>
+  <!-- 查询 -->
+  <el-form>
+    <el-select v-model="params.siteId" placeholder="请选择站点">
+      <el-option 
+      v-for="item in siteList"
+      :key="item.siteId"
+      :label="item.siteName"
+      :value="item.siteId">
+      </el-option>
+    </el-select>
+    页面别名：<el-input v-model="params.pageAliase" style="width: 100px"></el-input>
+    <el-button type="primary" size="small" v-on:click="query">查询</el-button>
 
+    <router-link class="mui-tabl-item" 
+    :to="{path:'/cms/page/add',query:{
+      page:this.params.page,
+      siteId : this.params.siteId,
+      pageAliase: this.params.pageAliase
+    }}">
+    <el-button type="primary" size="small" >新增页面</el-button>
+    </router-link>
+  </el-form>
+  
   <!-- list table -->
   <el-table :data="list" stripe style="width: 100%">
     <el-table-column type="index" width="60">
@@ -19,6 +39,14 @@
     <el-table-column prop="pagePhysicalPath" label="物理路径" width="250">
     </el-table-column>
     <el-table-column prop="pageCreateTime" label="创建时间" >
+    </el-table-column>
+    <el-table-column label="编辑" width="80">
+      <template slot-scope="scope">
+        <el-button
+          size="small" type="primary"
+          @click="edit(scope.row.pageId)">编辑
+        </el-button>
+      </template>
     </el-table-column>
   </el-table>
 
@@ -39,54 +67,20 @@
   export default {
     data() {
       return {
-        "list": [
-          {
-            "siteId": "5a751fab6abb5044e0d19ea1",
-            "pageId": "5a754adf6abb500ad05688d9",
-            "pageName": "index.html",
-            "pageAliase": "首页",
-            "pageWebPath": "/index.html",
-            "pageParameter": null,
-            "pagePhysicalPath": "F:\\develop\\xc_portal_static\\",
-            "pageType": "0",
-            "pageTemplate": null,
-            "pageHtml": null,
-            "pageStatus": null,
-            "pageCreateTime": "2018-02-03T05:37:53.256+0000",
-            "templateId": "5a962b52b00ffc514038faf7",
-            "pageParams": null,
-            "htmlFileId": "5a7c1c54d019f14d90a1fb23",
-            "dataUrl": null
-          },
-          {
-            "siteId": "5a751fab6abb5044e0d19ea1",
-            "pageId": "5a795ac7dd573c04508f3a56",
-            "pageName": "index_banner.html",
-            "pageAliase": "轮播图",
-            "pageWebPath": "/include/index_banner.html",
-            "pageParameter": null,
-            "pagePhysicalPath": "F:\\develop\\xc_portal_static\\include\\",
-            "pageType": "0",
-            "pageTemplate": null,
-            "pageHtml": null,
-            "pageStatus": null,
-            "pageCreateTime": "2018-02-06T07:34:21.255+0000",
-            "templateId": "5a962bf8b00ffc514038fafa",
-            "pageParams": null,
-            "htmlFileId": "5a795bbcdd573c04508f3a59",
-            "dataUrl": null
-          }
-        ],
+        "list": [],
+        "siteList":[],
         "total": 22,
         params:{
           page:1,
-          size:10
+          size:10,
+          siteId:"",
+          pageAliase:""
         }
       }
     },
     methods: {
       query: function(){
-        cmsApi.page_list(this.params.page,this.params.size).then((res)=>{
+        cmsApi.page_list(this.params.page,this.params.size,this.params).then((res)=>{
           console.log(res)
           // 将结果赋值
           this.list = res.queryResult.list;
@@ -96,11 +90,34 @@
       changePage: function(page){
         this.params.page = page;
         this.query();
+      },
+      edit: function(pageId){
+        this.$router.push({
+          path:'/cms/page/edit/' + pageId,
+          query:{
+            page:this.params.page,
+            siteId : this.params.siteId,
+            pageAliase: this.params.pageAliase
+          }
+        })
       }
+    },
+    created() {
+      // 如果是从其他页面跳转回此页面，需要设置参数
+      this.params.page = Number.parseInt(this.$route.query.page || 1);
+      this.params.siteId = this.$route.query.siteId || '';
+      this.params.pageAliase = this.$route.query.pageAliase || '';
     },
     mounted() {
       // Dom元素加载完后执行
       this.query();
+      // 初始化站点，直接写死
+      this.siteList = [
+        {
+          siteId: '5a751fab6abb5044e0d19ea1',
+          siteName: '门户主站'
+        }
+      ]
     },
   }
 </script>
