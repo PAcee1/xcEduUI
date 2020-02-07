@@ -119,7 +119,7 @@
                   //返回
                   this.go_back();
                 }else{
-                  this.$message.error('修改失败');
+                  this.$message.error(res.message);
                 }
               });
             });

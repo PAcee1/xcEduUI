@@ -22,3 +22,7 @@ export const page_get = (id) => {
 export const page_edit = (id,pageParams) => {
   return http.requestPut(apiUrl + "/cms/page/update/" + id,pageParams);
 }
+// 删除接口
+export const page_delete = (id) => {
+  return http.requestDelete(apiUrl + "/cms/page/delete/" + id);
+}

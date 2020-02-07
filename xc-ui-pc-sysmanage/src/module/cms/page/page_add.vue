@@ -126,7 +126,7 @@
                   // 然后清除表单
                   this.resetForm();
                 }else{
-                  this.$message.error("新增失败！");
+                  this.$message.error(res.message);
                 }
               })
             })
