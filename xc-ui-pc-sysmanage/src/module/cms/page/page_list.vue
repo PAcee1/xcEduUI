@@ -51,9 +51,9 @@
     </el-table-column>
     <el-table-column prop="pagePhysicalPath" label="物理路径" width="150">
     </el-table-column>
-    <el-table-column prop="pageCreateTime" label="创建时间"  width="150">
+    <el-table-column prop="pageCreateTime" label="创建时间"  width="170">
     </el-table-column>
-    <el-table-column label="操作" width="200">
+    <el-table-column label="操作" width="230">
       <template slot-scope="scope">
         <el-button
           size="small" type="text"
@@ -66,6 +66,10 @@
         <el-button
           size="small" type="text"
           @click="preview(scope.row.pageId)">页面预览
+        </el-button>
+        <el-button
+          size="small" type="text"
+          @click="publish(scope.row.pageId)">页面发布
         </el-button>
       </template>
     </el-table-column>
@@ -148,6 +152,19 @@
       preview(pageId){
         // 只需打开一个浏览器窗口
         window.open("http://www.xuecheng.com/cms/preview/" + pageId);
+      },
+      publish(pageId){
+        this.$confirm("确认发布该页面吗？","提示",{}).then(() => {
+          cmsApi.page_publish(pageId).then((res) => {
+            if(res.success){
+              this.$message.success("发布成功，请稍后查看结果");
+              // 刷新页面
+              this.query();
+            }else{
+              this.$message.error("发布失败，请联系管理员")
+            }
+          })
+        });
       }
     },
     created() {

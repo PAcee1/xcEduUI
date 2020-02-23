@@ -26,3 +26,7 @@ export const page_edit = (id,pageParams) => {
 export const page_delete = (id) => {
   return http.requestDelete(apiUrl + "/cms/page/delete/" + id);
 }
+// 发布页面接口
+export const page_publish = (id) => {
+  return http.requestPost(apiUrl + "/cms/page/publishPage/" + id);
+}
