@@ -50,7 +50,7 @@
         total: 0,
         courses: [
           {
-            id:'402885816240d276016240f7e5000002',
+            id:'4028e581617f945f01617f9dabc40000',
             name:'test01',
             pic:''
           },
@@ -82,6 +82,7 @@
         });
       },
       handleManage: function (id) {
+        debugger
         console.log(id)
         this.$router.push({ path: '/course/manager/'+id})
       }

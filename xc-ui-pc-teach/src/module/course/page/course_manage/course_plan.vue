@@ -147,9 +147,11 @@
               this.teachplanActive.courseid = this.courseid
               courseApi.addTeachplan(this.teachplanActive).then(res=>{
                 if(res.success){
-                    this.$message.success("添加成功")
+                    this.$message.success("添加成功");
+                    // 关闭窗口
+                    this.teachplayFormVisible = false;
                     //刷新树
-                    this.findTeachplan()
+                    this.findTeachplan();
                 }else{
                   this.$message.error(res.message)
                 }

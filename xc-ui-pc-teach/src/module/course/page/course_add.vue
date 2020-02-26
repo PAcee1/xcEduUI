@@ -16,12 +16,12 @@
         </el-cascader>
       </el-form-item>
       <el-form-item label="课程等级" prop="grade">
-        <b v-for="grade in gradeList">
+        <b v-for="(grade,index) in gradeList" :key="index">
           <el-radio v-model="courseForm.grade" :label="grade.sdId" >{{grade.sdName}}</el-radio>&nbsp;&nbsp;
         </b>
       </el-form-item>
       <el-form-item label="学习模式" prop="studymodel">
-        <b v-for="studymodel_v in studymodelList">
+        <b v-for="(studymodel_v,index) in studymodelList" :key="index">
           <el-radio v-model="courseForm.studymodel" :label="studymodel_v.sdId" >{{studymodel_v.sdName}}</el-radio>&nbsp;&nbsp;
         </b>
 
@@ -49,7 +49,7 @@
         studymodelList:[],
         gradeList:[],
         props: {
-          value: 'id',
+          value:'id',
           label:'name',
           children:'children'
         },
@@ -108,19 +108,15 @@
       // 查询课程分类
       courseApi.category_findlist().then(res=>{
           this.categoryList = res.children;
-          console.log(this.categoryList)
-
       })
 
       //查询数据字典
       //查询课程等级
       systemApi.sys_getDictionary("200").then(res=>{
-
         this.gradeList = res.dvalue;
       })
       //查询学习模式
       systemApi.sys_getDictionary("201").then(res=>{
-
         this.studymodelList = res.dvalue;
       })
 

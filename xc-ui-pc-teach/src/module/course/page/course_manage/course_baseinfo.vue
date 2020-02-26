@@ -16,12 +16,12 @@
         </el-cascader>
       </el-form-item>
       <el-form-item label="课程等级" prop="grade">
-        <b v-for="grade in gradeList">
+        <b v-for="(grade,index) in gradeList" :key="index">
           <el-radio v-model="courseForm.grade" :label="grade.sdId" >{{grade.sdName}}</el-radio>&nbsp;&nbsp;
         </b>
       </el-form-item>
       <el-form-item label="学习模式" prop="studymodel">
-        <b v-for="studymodel_v in studymodelList">
+        <b v-for="(studymodel_v,index) in studymodelList" :key="index">
           <el-radio v-model="courseForm.studymodel" :label="studymodel_v.sdId" >{{studymodel_v.sdName}}</el-radio>&nbsp;&nbsp;
         </b>
 
@@ -95,8 +95,7 @@
                 let st = this.categoryActive[1];
                 this.courseForm.mt = mt;
                 this.courseForm.st = st;
-                let id = this.courseForm.id
-                courseApi.updateCoursebase(id,this.courseForm).then((res) => {
+                courseApi.updateCoursebase(this.courseForm).then((res) => {
                   this.editLoading = false;
                   if(res.success){
                     this.$message({
@@ -134,14 +133,14 @@
       });
       //查询课程信息
         //课程id
-        this.courseid = this.$route.params.courseid;
-         courseApi.getCoursebaseById(this.courseid).then((res) => {
+      this.courseid = this.$route.params.courseid;
+      courseApi.getCoursebaseById(this.courseid).then((res) => {
 //          console.log(res);
-          this.courseForm = res;
-          //课程分类显示，需要两级分类
-          this.categoryActive.push(this.courseForm.mt);
-          this.categoryActive.push(this.courseForm.st);
-        });
+        this.courseForm = res;
+        //课程分类显示，需要两级分类
+        this.categoryActive.push(this.courseForm.mt);
+        this.categoryActive.push(this.courseForm.st);
+      });
     }
   }
 </script>

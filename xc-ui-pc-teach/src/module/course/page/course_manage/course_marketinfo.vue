@@ -2,7 +2,7 @@
   <div>
     <el-form :model="courseMarketForm" label-width="110px" :rules="courseMarketFormRules" ref="courseMarketForm">
       <el-form-item label="课程价格" prop="charge">
-        <b v-for="charge in chargeList">
+        <b v-for="(charge,index) in chargeList" :key="index">
           <el-radio v-model="courseMarketForm.charge" :label="charge.sdId" >{{charge.sdName}}</el-radio>
           &nbsp;&nbsp;
         </b>
@@ -10,7 +10,7 @@
         金额（元）：<el-input :disabled="this.courseMarketForm.charge == '203002'?false:true" v-model="courseMarketForm.price" ></el-input>
       </el-form-item>
       <el-form-item label="课程有效期" prop="expires">
-        <b v-for="valid in validList">
+        <b v-for="(valid,index) in validList" :key="index">
           <el-radio v-model="courseMarketForm.valid" :label="valid.sdId" >{{valid.sdName}}</el-radio>&nbsp;&nbsp;
         </b>
         <br/>
@@ -70,7 +70,7 @@
         this.$refs.courseMarketForm.validate((valid) => {
           if (valid) {
             this.$confirm('确认提交吗？', '提示', {}).then(() => {
-              courseApi.updateCourseMarket(this.courseid,this.courseMarketForm).then((res) => {
+              courseApi.updateCourseMarket(this.courseMarketForm).then((res) => {
                this.editLoading = false;
                if(res.success){
                  this.$message.success('提交成功');
