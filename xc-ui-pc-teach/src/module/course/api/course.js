@@ -52,7 +52,7 @@ export const addCoursePic= (courseId,pic) => {
 }
 //查询课程图片
 export const findCoursePicList = courseId => {
-  return http.requestQuickGet(apiUrl+'/course/coursepic/list/'+courseId)
+  return http.requestQuickGet(apiUrl+'/course/coursepic/get/'+courseId)
 }
 
 //删除课程图片
