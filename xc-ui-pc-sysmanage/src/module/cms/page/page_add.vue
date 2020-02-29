@@ -99,6 +99,20 @@
       }
     },
     methods: {
+      // 查询站点列表
+      querySite: function(){
+        cmsApi.site_list().then((res)=>{
+          // 将结果赋值
+          this.siteList = res;
+        })
+      },
+      // 查询模板列表
+      queryTemplate: function(){
+        cmsApi.template_list().then((res)=>{
+          // 将结果赋值
+          this.templateList = res;
+        })
+      },
       // 返回上一页，需要带上之前的参数
       goBack(){
         // 获取路由中的参数，返回时带上
@@ -141,23 +155,25 @@
     },
     mounted() {
       //初始化站点列表
-      this.siteList = [
-        {
-          siteId:'5a751fab6abb5044e0d19ea1',
-          siteName:'门户主站'
-        }
-      ]
-      //模板列表
-      this.templateList = [
-        {
-          templateId:'5a962b52b00ffc514038faf7',
-          templateName:'首页'
-        },
-        {
-          templateId:'5e4fcf45392c02403c3fbbcc',
-          templateName:'轮播图'
-        }
-      ]
+      this.querySite();
+      this.queryTemplate();
+      // this.siteList = [
+      //   {
+      //     siteId:'5a751fab6abb5044e0d19ea1',
+      //     siteName:'门户主站'
+      //   }
+      // ]
+      // //模板列表
+      // this.templateList = [
+      //   {
+      //     templateId:'5a962b52b00ffc514038faf7',
+      //     templateName:'首页'
+      //   },
+      //   {
+      //     templateId:'5e4fcf45392c02403c3fbbcc',
+      //     templateName:'轮播图'
+      //   }
+      // ]
     },
   }
 </script>

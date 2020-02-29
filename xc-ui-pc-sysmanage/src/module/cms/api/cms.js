@@ -30,3 +30,11 @@ export const page_delete = (id) => {
 export const page_publish = (id) => {
   return http.requestPost(apiUrl + "/cms/page/publishPage/" + id);
 }
+// 查询站点列表接口
+export const site_list = () => {
+  return http.requestQuickGet(apiUrl + "/cms/site/list");
+}
+// 查询模板列表接口
+export const template_list = () => {
+  return http.requestQuickGet(apiUrl + "/cms/template/list");
+}
