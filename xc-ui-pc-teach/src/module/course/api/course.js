@@ -54,14 +54,13 @@ export const addCoursePic= (courseId,pic) => {
 export const findCoursePicList = courseId => {
   return http.requestQuickGet(apiUrl+'/course/coursepic/get/'+courseId)
 }
-
 //删除课程图片
 export const deleteCoursePic= courseId => {
   return http.requestDelete(apiUrl+'/course/coursepic/delete?courseId='+courseId)
 }
 /*预览课程*/
 export const preview = id => {
-  return http.requestPost(apiUrl+'/course/preview/'+id);
+  return http.requestPost(apiUrl+'/coursepage/preview/'+id);
 }
 /*发布课程*/
 export const publish = id => {
