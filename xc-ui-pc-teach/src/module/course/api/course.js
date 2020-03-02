@@ -64,7 +64,7 @@ export const preview = id => {
 }
 /*发布课程*/
 export const publish = id => {
-  return http.requestPost(apiUrl+'/course/publish/'+id);
+  return http.requestPost(apiUrl+'/coursepage/publish/'+id);
 }
 //查询课程信息
 export const findCourseView = courseId => {

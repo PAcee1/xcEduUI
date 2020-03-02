@@ -74,7 +74,7 @@ export default{
       courseApi.publish(this.courseid).then(res=>{
           if(res.success){
               this.$message.success("发布成功，请点击下边的链接查询课程详情页面")
-
+              this.course.status = "202002"
           }else{
             this.$message.error(res.message)
           }
