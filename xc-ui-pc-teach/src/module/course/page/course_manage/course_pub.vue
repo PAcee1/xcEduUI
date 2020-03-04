@@ -83,6 +83,7 @@ export default{
     },
     getCourseView(){
       courseApi.findCourseView(this.courseid).then(res=>{
+        debugger
         if(res && res.courseBase){
             //获取课程状态
             this.course.status = res.courseBase.status;
