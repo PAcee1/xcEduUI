@@ -1,0 +1,1607 @@
+@charset "UTF-8";
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.ft-cen {
+  text-align: center;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.ft-cen {
+  text-align: center;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.personal-header {
+  background: top center no-repeat #000000;
+  background-size: cover;
+  position: relative;
+  top: -10px;
+  padding: 20px 0;
+  height: 200px;
+}
+
+.personal-header .personal-info {
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 250px;
+  padding-top: 40px;
+  color: #fff;
+}
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.ft-cen {
+  text-align: center;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.personal-nav {
+  height: 550px;
+  width: 200px;
+  position: relative;
+  z-index: 11;
+  top: -70px;
+  padding: 0px !important;
+  background: #fff;
+}
+
+.personal-nav .title {
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  color: #00a4ff;
+}
+
+.personal-nav .my-ico {
+  width: 100%;
+  text-align: center;
+}
+
+.personal-nav .my-ico img {
+  box-shadow: 2px 2px 4px #000;
+  width: 70%;
+  margin: 0px auto;
+  border-radius: 50%;
+}
+
+.personal-nav .my-ico p {
+  text-align: center;
+  line-height: 50px;
+}
+
+.personal-nav .active a {
+  color: #00a4ff;
+}
+
+.personal-nav li a:hover, .personal-nav li a:active {
+  color: #00a4ff;
+}
+
+.personal-nav li {
+  color: #333;
+}
+
+.personal-nav a {
+  padding-top: 5px !important;
+  color: #333;
+  font-size: 14px;
+  line-height: 32px;
+  border-bottom: dashed 1px #f4f4f4;
+}
+
+.personal-nav a:before {
+  position: relative;
+  top: 0px;
+  font-size: 12px;
+}
+
+.personal-nav .item {
+  background: #fff;
+  padding: 20px 15px;
+  padding-top: 0px;
+}
+
+.personal-nav .item a {
+  display: block;
+  text-decoration: none;
+}
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.ft-cen {
+  text-align: center;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.personal-cont {
+  padding: 0px 10px 10px 25px;
+}
+
+.personal-cont .top .tit {
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+  color: #00a4ff;
+}
+
+.personal-cont .top .top-cont {
+  position: relative;
+  padding: 15px 15px 15px 51px;
+  background: #fff;
+}
+
+.personal-cont .top .top-cont .imgIco {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+}
+
+.personal-cont .top .top-cont .title {
+  font-size: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.personal-cont .top .top-cont .title .lab {
+  position: relative;
+  top: -3px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.personal-cont .top .top-cont .title .status {
+  margin-left: 10px;
+  border: solid 1px #ff7c2d;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  padding: 3px 10px;
+  color: #ff7c2d;
+  font-size: 15px;
+}
+
+.personal-cont .top .top-cont .about {
+  font-size: 18px;
+  color: #00a4ff;
+}
+
+.personal-cont .top .top-cont .about .lab {
+  font-size: 16px;
+}
+
+.personal-cont .top .top-cont .about .data {
+  font-size: 18px;
+  color: #999;
+}
+
+.personal-cont .top .top-cont .about::before {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(/static/images/asset-play.png) center center no-repeat;
+}
+
+.personal-cont .top .top-cont .rate {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.personal-cont .top .top-cont .rate li {
+  display: inline-block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: solid 1px rgba(0, 164, 255, 0.5);
+}
+
+.personal-cont .top .top-cont .rate .active {
+  background: rgba(0, 164, 255, 0.5);
+  border: solid 0px rgba(0, 164, 255, 0.5);
+}
+
+.personal-cont .top .top-cont .goLear {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 160px;
+  line-height: 36px;
+  color: #fff;
+  background: #ff7c2d;
+  border: solid 1px #ff7c2d;
+}
+
+.personal-cont .top .top-cont .evalu {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 160px;
+  color: #ff7c2d !important;
+  line-height: 36px;
+  color: #000;
+  background: #fff;
+  border: solid 1px #ff7c2d;
+}
+
+.personal-cont .top .top-cont .division {
+  width: 2px;
+  height: 180px;
+  position: absolute;
+  top: 0px;
+  right: 33%;
+  background: #f3f5f7;
+}
+
+.personal-cont .top .top-cont .division::after, .personal-cont .top .top-cont .division::before {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: -5px;
+  background: #f3f5f7;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.personal-cont .top .top-cont .division::after {
+  top: 154px;
+}
+
+.personal-cont .top .top-cont .text-right {
+  text-align: center;
+}
+
+.personal-cont .top .top-cont .btn-primary {
+  position: relative;
+  top: 50px;
+}
+
+.personal-cont .my-course {
+  padding: 0px;
+}
+
+.personal-cont .my-course .title {
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.personal-cont .my-course .title .lab-title {
+  font-size: 18px;
+  color: #00a4ff;
+}
+
+.personal-cont .my-course .title .tit-Item {
+  background: #fff;
+  padding: 0 10px;
+  line-height: 15px;
+  color: #333;
+}
+
+.personal-cont .my-course .title .tit-Item span {
+  padding: 10px 0;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.personal-cont .my-course .title .tit-Item span em {
+  display: inline-block;
+  padding: 0 20px;
+  border-right: solid 1px #999;
+}
+
+.personal-cont .my-course .title .tit-Item span em:last-child {
+  border: none;
+}
+
+.personal-cont .my-course .title .tit-Item span:last-child {
+  float: right;
+}
+
+.personal-cont .my-course .title .tit-Item .active {
+  color: #00a4ff;
+}
+
+.personal-cont .my-course .cont .col-lg-6 {
+  padding: 0px;
+}
+
+.personal-cont .my-course .cont .item {
+  background: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.personal-cont .my-course .cont .item .imgIco {
+  position: absolute;
+  left: -4px;
+  top: 30px;
+}
+
+.personal-cont .my-course .cont .item .title {
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 14px;
+  padding: 30px 0px 0 70px;
+}
+
+.personal-cont .my-course .cont .item .title .lab {
+  position: relative;
+  top: -2px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.personal-cont .my-course .cont .item .title .status {
+  margin-left: 10px;
+  border: solid 1px #ff7c2d;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  padding: 3px 10px;
+  color: #ff7c2d;
+  font-size: 15px;
+}
+
+.personal-cont .my-course .cont .item .title .out {
+  color: #999;
+  border-color: #999;
+}
+
+.personal-cont .my-course .cont .item .title .outst {
+  color: #50b400;
+  border-color: #50b400;
+}
+
+.personal-cont .my-course .cont .item .about {
+  font-size: 18px;
+  padding: 10px 10px 10px 70px;
+  color: #00a4ff;
+}
+
+.personal-cont .my-course .cont .item .about .lab {
+  font-size: 16px;
+}
+
+.personal-cont .my-course .cont .item .about::before {
+  content: ' ';
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(/static/images/asset-play.png) center center no-repeat;
+}
+
+.personal-cont .my-course .cont .item .time {
+  padding: 0px 10px 10px 70px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}
+
+.personal-cont .my-course .cont .item .rate {
+  margin-top: 10px;
+  padding: 0px 15px 15px 70px;
+}
+
+.personal-cont .my-course .cont .item .rate li {
+  display: inline-block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: solid 1px rgba(0, 164, 255, 0.5);
+}
+
+.personal-cont .my-course .cont .item .rate .active {
+  background: rgba(0, 164, 255, 0.5);
+  border: solid 0px rgba(0, 164, 255, 0.5);
+}
+
+.personal-cont .my-course .cont .item .rate span {
+  position: relative;
+  top: -2px;
+  color: #333;
+}
+
+.personal-cont .my-course .cont .item .rate span em {
+  margin-left: 10px;
+}
+
+.personal-cont .my-course .cont .col-lg-6:nth-child(2n+1) .item {
+  margin: 0px 5px 0px 0;
+}
+
+.personal-cont .my-course .cont .col-lg-6:nth-child(2n) .item {
+  margin: 0px 0px 0px 5px;
+}
+
+.personal-cont .my-course .cont .comment {
+  width: 100%;
+  padding-left: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.personal-cont .my-course .cont .comment .star-show {
+  width: 109px;
+  height: 19px;
+  margin-top: 0px;
+  display: inline-block;
+  background: url(/static/images/asset-star-show.png) no-repeat;
+  background-size: contain;
+}
+
+.personal-cont .my-course .cont .comment .star-show .score {
+  display: inline-block;
+}
+
+.personal-cont .my-course .cont .comment .star-show .score i {
+  display: none;
+}
+
+.personal-cont .my-course .cont .comment .text {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.personal-cont .my-course .cont .comment .text em {
+  color: #ff7c2d;
+}
+
+.personal-cont .my-course .cont .parting {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  margin-top: 10px;
+  border-top: solid 1px #f3f5f7;
+}
+
+.personal-cont .my-course .cont .parting::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  top: -5px;
+  border-radius: 50%;
+  background: #f3f5f7;
+}
+
+.personal-cont .my-course .cont .parting::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -5px;
+  top: -5px;
+  border-radius: 50%;
+  background: #f3f5f7;
+}
+
+.personal-cont .my-course .cont .butItem {
+  margin-bottom: 10px;
+}
+
+.personal-cont .my-course .cont .butItem a {
+  margin: 0 15px;
+  color: #999;
+  font-weight: 300;
+  padding: 4px 10px;
+}
+
+.personal-cont .my-course .cont .butItem .golearing {
+  border: solid 1px #00a4ff;
+  background: #00a4ff;
+  color: #fff;
+}
+
+.personal-cont .my-course .cont .butItem .classcom {
+  border: solid 1px #00a4ff;
+  color: #00a4ff;
+}
+
+.personal-cont .help {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  background: #fff;
+  color: #333;
+}
+
+.personal-cont .help span {
+  margin-right: 40px;
+}
+
+.personal-cont .help span::before {
+  position: relative;
+  top: 2px;
+  margin-right: 3px;
+}
+
+.personal-cont .aft {
+  font-size: 15px;
+  position: absolute;
+  line-height: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #999;
+  top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.personal-cont .aft ul {
+  position: relative;
+  top: 10px;
+  padding: 15px;
+  background: #fff;
+}
+
+.personal-cont .aft li {
+  line-height: 34px;
+  list-style: none;
+}
+
+.personal-cont .aft li a {
+  color: #000;
+}
+
+.personal-cont .aft li:hover a {
+  color: #00a4ff;
+}
+
+.personal-cont .ac {
+  color: #00a4ff;
+}
+
+.personal-cont .ac ul {
+  border: solid 1px #ddd;
+}
+
+.personal-cont #listcont {
+  position: absolute;
+  bottom: 9999px;
+}
+
+/*
+ * colors variables
+ */
+html, body {
+  min-height: 100%;
+  height: 100%;
+  min-width: 1000px;
+  background: #f3f5f7;
+}
+
+a {
+  color: #2da1e7;
+}
+
+a:hover {
+  color: #2da1e7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0px;
+  margin: 0;
+  line-height: 200%;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.cr-pd-mr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cl-red {
+  color: red !important;
+}
+
+.cl-orange {
+  color: #ff5a2c !important;
+}
+
+.ft-cen {
+  text-align: center;
+}
+
+.more {
+  color: #2da1e7;
+}
+
+.cl-basics {
+  color: #00a4ff;
+}
+
+.hv-poin:hover {
+  cursor: pointer;
+}
+
+.pd-left {
+  padding-left: 15px;
+}
+
+.pd-rit {
+  padding-right: 15px;
+}
+
+.btn-primary {
+  background: #00a4ff;
+  border: none;
+}
+
+.cl-boder {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****
+* icon 图标 common
+****/
+.i-chevron-top {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px 2px;
+}
+
+.i-chevron-bot {
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -83px -6px;
+}
+
+.i-heart {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -104px 0px;
+}
+
+.i-star {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -57px 0px;
+}
+
+.i-weixin {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px 1px;
+}
+
+.i-qq {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -26px 0px;
+}
+
+.i-answer {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px 0px;
+}
+
+.i-browse {
+  display: inline-block;
+  width: 15px;
+  height: 12px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 0px -20px;
+}
+
+.i-problem {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -133px -21px;
+}
+
+.i-node {
+  display: inline-block;
+  width: 23px;
+  height: 19px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -102px -21px;
+}
+
+.i-edt {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -19px;
+}
+
+.i-del {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -43px -19px;
+}
+
+.i-laud {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -64px -19px;
+}
+
+.i-coll {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: 1px -35px;
+}
+
+.i-play {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(/static/images/asset-icoGather.png) no-repeat;
+  background-position: -22px -35px;
+  margin-right: 8px;
+}
+
+.personal-content .go-problem-feedback {
+  border-top: solid 2px #333;
+  font-size: 24px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.personal-content {
+  width: 930px;
+}

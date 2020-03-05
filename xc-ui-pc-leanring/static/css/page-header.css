@@ -1,0 +1,155 @@
+header {
+    width: 100%;
+    background: #fff;
+    border-bottom: solid 1px #ccc;
+}
+
+header a {
+    color: #333;
+}
+
+header a:hover {
+    color: #ff7c2d;
+    text-decoration: none;
+}
+
+header .navbar {
+    min-width: 1024px;
+    margin: 0 auto;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+header .navbar .logo {
+    width: 195px;
+    float: left;
+    min-width: 110px;
+    margin-right: 2%;
+}
+
+header .navbar .starch {
+    float: right;
+    min-width: 326px;
+    margin-right: 5%;
+}
+header .navbar .starch div {
+    float:left;
+}
+header .navbar .starch .searchword {
+    margin-top: 7px;
+    padding: 5px 0 0 4px;
+    border: solid 1px #00a4ff;
+    width: 40px;
+    height: 35px;
+    font-size: 15px;
+    color: #fff;
+    background: #00a4ff;
+  cursor: pointer;
+}
+header .navbar .starch .searchword a{
+    color: #fff;
+  cursor: pointer;
+}
+header .navbar .sign-in {
+    float: right;
+}
+
+header .navbar .sign-in a {
+    color: #14191f;
+    padding-left: 30px;
+}
+
+header .navbar .sign-in span {
+    color: #787d82;
+}
+
+header .navbar .sign-in .personal {
+    color: #787d82;
+}
+
+header .navbar .sign-in .personal .personalIco::before {
+    content: ' ● ';
+    color: red;
+    font-weight: bold;
+    right: 1px;
+    top: -8px;
+    position: absolute;
+}
+
+header .navbar .sign-in .personal span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 6px;
+    margin-left: 8px;
+    background: url(/static/images/asset-personalIco.png) no-repeat;
+}
+
+header .navbar .sign-in .myInfo {
+    color: #787d82;
+}
+
+header .navbar .sign-in .myInfo img {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+}
+
+header .navbar-nav {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+header .navbar-nav li a {
+    padding: 9px 15px !important;
+}
+
+header .active {
+    border-bottom: solid 2px #00a4ff;
+}
+
+header .sign-in {
+    margin-top: 12px;
+    margin-right: 0px;
+}
+
+header .sign-in a {
+    color: #00a4ff;
+}
+
+header .learingHeader {
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header input {
+    height: 35px;
+    margin-top: 7px;
+}
+
+header .input-search {
+    border: solid 2px #00a4ff;
+    width: 280px;
+    padding-left: 10px;
+    height: 35px;
+}
+
+header .search-buttom {
+    border: solid 2px #00a4ff;
+    background: #00a4ff;
+    color: #fff;
+    font-weight: bold;
+    width: 14%;
+    max-width: 80px;
+}

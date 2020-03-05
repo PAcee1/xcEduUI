@@ -6,9 +6,10 @@
     <link href="/plugins/videojs/video-js.css" rel="stylesheet">
 </head>
 <body>
-<video id=example-video width=800 height=600 class="video-js vjs-default-skin vjs-big-play-centered" controls poster="http://127.0.0.1:90/video/add.jpg">
+<video id=example-video width=800 height=600 class="video-js vjs-default-skin vjs-big-play-centered" 
+controls poster="http://127.0.0.1:90/video/add.jpg">
     <source
-            src="http://video.xuecheng.com/video/lucene.m3u8"
+            src="http://video.xuecheng.com/video/hls/lucene.m3u8"
             type="application/x-mpegURL">
 </video>
 <input type="button" onClick="switchvideo()" value="switch"/>
@@ -21,7 +22,7 @@
 
     function switchvideo(){
         player.src({
-            src: 'http://video.xuecheng.com/video/lucene.m3u8',
+            src: 'http://video.xuecheng.com/video/hls/lucene.m3u8',
             type: 'application/x-mpegURL',
             withCredentials: true
         });

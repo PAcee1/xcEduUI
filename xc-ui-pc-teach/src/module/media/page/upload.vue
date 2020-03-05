@@ -56,10 +56,8 @@
             // 计算文件的唯一标识，用于断点续传
             (new WebUploader.Uploader()).md5File(file, 0, 100*1024*1024)
               .then(function(val) {
-
                 this.fileMd5 = val;
                 this.uploadFile = file;
-//                alert(this.fileMd5 )
                 //向服务端请求注册上传文件
                 $.ajax(
                   {
@@ -106,7 +104,7 @@
                 },
                 dataType:"json",
                 success:function(response) {
-                  if(response.ifExist) {
+                  if(response.fileExist) {
                     // 分块存在，跳过该分块
                     deferred.reject();
                   } else {
