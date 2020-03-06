@@ -10,3 +10,8 @@ export const media_list = (page,size,params) => {
   let querys = querystring.stringify(params)
   return http.requestQuickGet(apiUrl+'/media/file/list/'+page+'/'+size+'/?'+querys)
 }
+/*手动处理*/
+export const media_process = (id) => {
+  //params为json格式
+  return http.requestQuickGet(apiUrl+'/media/upload/process/'+id)
+}
