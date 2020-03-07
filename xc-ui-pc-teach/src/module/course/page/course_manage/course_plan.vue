@@ -107,11 +107,14 @@
       }
     },
     methods: {
-        //选择视频，打开窗口
+      //选择视频，打开窗口
       choosevideo(data){
           //得到当前的课程计划
           this.teachplanId = data.id
-//        alert(this.teachplanId)
+          if(data.grade != '3'){
+            this.$message.error("只有三级分类才可以添加视频");
+            return;
+          }
           this.mediaFormVisible = true;//打开窗口
       },
 
@@ -128,9 +131,11 @@
 
         courseApi.savemedia(teachplanMedia).then(res=>{
             if(res.success){
-                this.$message.success("选择视频成功")
+              this.$message.success("选择视频成功")
+              // 关闭窗口
+              this.mediaFormVisible = false;
               //查询课程计划
-              this.findTeachplan()
+              this.findTeachplan();
             }else{
               this.$message.error(res.message)
             }
@@ -155,7 +160,6 @@
                 }else{
                   this.$message.error(res.message)
                 }
-
               })
             }
         })
@@ -172,7 +176,6 @@
           this.$set(data, 'children', []);
         }
         data.children.push(newChild);
-
       },
 
       edit(data){
@@ -184,21 +187,6 @@
         const children = parent.data.children || parent.data;
         const index = children.findIndex(d => d.id === data.id);
         children.splice(index, 1);
-
-      },
-
-      renderContent(h, { node, data, store }) {
-        return (
-          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
-            <span>
-              <span>{node.label}</span>
-            </span>
-            <span>
-              <el-button style="font-size: 12px;" type="text" on-click={ () => this.choosevideo(data) }>{data.mediaFileOriginalName}&nbsp;&nbsp;&nbsp;&nbsp; 选择视频</el-button>
-              <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
-              <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(node, data) }>删除</el-button>
-            </span>
-          </span>);
       },
 
       findTeachplan(){
@@ -208,10 +196,54 @@
             if(res && res.children){
               this.teachplanList = res.children;
             }
-
-
         })
+      },
+
+      renderContent(h, { node, data, store }) {
+        let html;
+        if(data.grade == '3' && data.mediaFileOriginalName !== null){
+          html = (
+          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
+            <span>
+              <span>{node.label}</span>
+            </span>
+            <span>
+              <span  style="font-size: 12px;line-height: 40px;margin-right: 10px;">已选择视频：{data.mediaFileOriginalName}</span>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(node, data) }>删除</el-button>
+            </span>
+          </span> )
+        } else if(data.grade == '3' && data.mediaFileOriginalName === null){
+          html = (
+          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
+            <span>
+              <span>{node.label}</span>
+            </span>
+            <span>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.choosevideo(data) }>
+                选择视频
+              </el-button>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(node, data) }>删除</el-button>
+            </span>
+          </span> )
+        }else{
+          html = (
+          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
+            <span>
+              <span>{node.label}</span>
+            </span>
+            <span>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(node, data) }>删除</el-button>
+            </span>
+          </span> )
+        }
+        return (html);
+          
       }
+
+      
     },
     mounted(){
       //课程id

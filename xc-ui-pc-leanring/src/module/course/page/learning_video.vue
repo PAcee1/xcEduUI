@@ -580,14 +580,20 @@
       this.chapter = this.$route.params.chapter
       //取出课程Id
       systemApi.course_view(this.courseId).then((view_course)=>{
-
-
+        console.log(view_course)
+        // 判空
+        if(view_course === null){
+          this.$message.error("获取课程信息失败");
+        }
+        let teachplan = view_course.teachplan;
+        let teachplanObj = JSON.parse(teachplan);
+        this.teachplanList = teachplanObj.children;
       })
     },
     mounted() {
 
       //播放测试
-      this.playvideo("http://video.xuecheng.com/video/hls/lucene.m3u8")
+      this.playvideo("http://video.xuecheng.com/video/5/f/5fbb79a2016c0eb609ecd0cd3dc48016/hls/5fbb79a2016c0eb609ecd0cd3dc48016.m3u8")
 //      this.playvideo("http://video.xuecheng.com/video/5/3/53ac4cca3ddf386c21f4f1cbb4dc9876/hls/53ac4cca3ddf386c21f4f1cbb4dc9876.m3u8")
 
       $(function() {
