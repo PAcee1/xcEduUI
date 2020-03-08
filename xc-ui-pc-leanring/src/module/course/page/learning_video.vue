@@ -567,7 +567,29 @@
 
       //开始学习
       study(chapter){
+        courseApi.get_media(this.courseId,chapter).then(res => {
+          if(res.success){
+            // 拼接播放地址
+            let videoUrl = sysConfig.videoUrl + res.fileUrl;
+            this.playvideo(videoUrl);
+          }else if(res.message){
+            this.$message.error(res.message)
+          }else{
+            this.$message.error("播放视频失败，请刷新页面重试")
+          }
+        })
+      },
 
+      // 取出第一个课程计划
+      getFirstTeachplan(){
+        for(var i = 0 ; i<this.teachplanList.length ; i++){
+          let teachList = this.teachplanList[i];
+          // 判断如果有孩子，并且孩子数量不为空，则取出第一个孩子即第一个课程计划
+          if(teachList.children && teachList.children.length > 0){
+            return teachList.children[0].id;
+          }
+        }
+        return ;
       }
 
     },
@@ -580,14 +602,24 @@
       this.chapter = this.$route.params.chapter
       //取出课程Id
       systemApi.course_view(this.courseId).then((view_course)=>{
-        console.log(view_course)
         // 判空
         if(view_course === null){
           this.$message.error("获取课程信息失败");
         }
         let teachplan = view_course.teachplan;
         let teachplanObj = JSON.parse(teachplan);
+        // 取课程计划
         this.teachplanList = teachplanObj.children;
+
+        // 获取视频播放地址
+        if(this.chapter != '0'){
+          // 不等于0，说明为课程计划id，请求后端获取视频路径
+          this.study(this.chapter)
+        }else{
+          // 等于0 ，取第一个课程计划id播放
+          let firstTeach = this.getFirstTeachplan();
+          this.study(firstTeach);
+        }
       })
     },
     mounted() {

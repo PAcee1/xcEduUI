@@ -12,7 +12,7 @@ export const course_learnstatus = courseId => {
 }
 /*获取播放地址*/
 export const get_media = (courseId,chapter) => {
-  return http.requestGet(apiUrl+'/learning/getmedia/'+courseId+'/'+chapter);
+  return http.requestGet(apiUrl+'/learning/course/getmedia/'+courseId+'/'+chapter);
 }
 
 
