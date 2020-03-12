@@ -71,47 +71,39 @@ export default {
   },
   methods: {
     login: function () {
+      this.$refs.loginForm.validate((valid) => {
+        if (valid) {
+          this.editLoading = true;
+          let para = Object.assign({}, this.loginForm);
+          loginApi.login(para).then((res) => {
+            this.editLoading = false;
+            if(res.success){
+              this.$message('登陆成功');
+              //刷新 当前页面
+              // alert(this.returnUrl)
+              console.log(this.returnUrl)
+              if(this.returnUrl!='undefined' && this.returnUrl!=''
+                                                && !this.returnUrl.includes("/userlogout")
+                                                && !this.returnUrl.includes("/userlogin")){
 
-        this.$refs.loginForm.validate((valid) => {
-          if (valid) {
-
-              this.editLoading = true;
-
-              let para = Object.assign({}, this.loginForm);
-
-              loginApi.login(para).then((res) => {
-                this.editLoading = false;
-                if(res.success){
-                  this.$message('登陆成功');
-                  //刷新 当前页面
-                 // alert(this.returnUrl)
-                  console.log(this.returnUrl)
-                  if(this.returnUrl!='undefined' && this.returnUrl!=''
-                                                   && !this.returnUrl.includes("/userlogout")
-                                                   && !this.returnUrl.includes("/userlogin")){
-
-                    window.location.href = this.returnUrl;
-                  }else{
-                    //跳转到首页
-                    window.location.href = 'http://www.xuecheng.com/'
-                  }
-
+                window.location.href = this.returnUrl;
+              }else{
+                //跳转到首页
+                window.location.href = 'http://www.xuecheng.com/'
+              }
+            }else{
+                if(res.message){
+                  this.$message.error(res.message);
                 }else{
-                    if(res.message){
-                      this.$message.error(res.message);
-                    }else{
-                      this.$message.error('登陆失败');
-                    }
+                  this.$message.error('登陆失败');
                 }
-              },
-                (res) => {
-                  this.editLoading = false;
-                });
-
-
-          }
-        });
-
+            }
+          },
+            (res) => {
+              this.editLoading = false;
+            });
+        }
+      });
     },
 
     resetForm:function(formName){

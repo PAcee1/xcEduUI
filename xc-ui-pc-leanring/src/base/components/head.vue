@@ -80,6 +80,7 @@
         }
       },
       showlogin:function(){
+        window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
         this.returnUrl = window.location;
         this.LoginFormVisible = true;
       }

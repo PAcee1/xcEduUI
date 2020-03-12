@@ -20,6 +20,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/public.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/css/el/index.js"></script>
 
 
 </head>
@@ -112,7 +113,7 @@
                 let activeUser= getActiveUser();
                 //取出cookie中的令牌
                 let uid = getCookie("uid")
-                //console.log(activeUser)
+                console.log(activeUser)
                 if(activeUser && uid && uid == activeUser.uid){
                     this.logined = true
                     this.user = activeUser;
