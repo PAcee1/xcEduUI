@@ -71,7 +71,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "mockjs": "^1.0.1-beta3",
-    "nightwatch": "^0.9.12",
+    "nightwatch": "^2.6.9",
     "node-notifier": "^5.1.2",
     "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
